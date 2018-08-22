@@ -1,0 +1,400 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"c",
+				"color\tcvplot::Color color() const"
+			],
+			[
+				"resi",
+				"resizeWindow\tvoid resizeWindow(const std::string &view, int width, int height)"
+			],
+			[
+				"ab",
+				"abs\tfloat abs(float __x)"
+			],
+			[
+				"Size",
+				"Size\tSize"
+			],
+			[
+				"setW",
+				"setWindowTitle\tvoid setWindowTitle(const std::string &view, const std::string &title)"
+			],
+			[
+				"pop",
+				"Population\tcv::Mat Population"
+			],
+			[
+				"row",
+				"rows\tint rows"
+			],
+			[
+				"col",
+				"cols\tint cols"
+			],
+			[
+				"Po",
+				"Popula"
+			],
+			[
+				"for",
+				"for_each\t_Function for_each(_InputIterator __first, _InputIterator __last, _Function __f)"
+			],
+			[
+				"randu",
+				"randu\tvoid randu(InputOutputArray dst, InputArray low, InputArray high)"
+			],
+			[
+				"m",
+				"main\tmain()"
+			],
+			[
+				"da",
+				"data_decode"
+			],
+			[
+				"im",
+				"image_size"
+			],
+			[
+				"com",
+				"command_buffer\tuchar * command_buffer"
+			],
+			[
+				"new",
+				"new_fd"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/main.cpp",
+			"settings":
+			{
+				"buffer_size": 2903,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 334,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "GeneticAlgorithmByC++ (Linux)",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					""
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"clean"
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"rebuild_cache"
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"GA"
+				],
+				[
+					"GeneticAlgorithmByC++ (Linux)",
+					"cvplotlib"
+				]
+			],
+			[
+				"GeneticAlgorithmByC++ (Linux)",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 450.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"gita",
+				"Git: Add All"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"clang",
+				"EasyClangComplete: Settings"
+			]
+		],
+		"width": 511.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/includes",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/src",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/src/cvplotlib"
+	],
+	"file_history":
+	[
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/src/cvplotlib/figure.cc",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/includes/figure.h",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/includes/window.h",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/CMakeLists.txt",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/src/cvplotlib/CMakeLists.txt",
+		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/src/CMakeLists.txt",
+		"/media/shisanchuan/C2B31627EFFD64AE/PY_work/tensorflow_test.py",
+		"/home/shisanchuan/文档/test.tex",
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/camer_pi_TCP.cpp",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/test.tex",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/Git/Git.sublime-settings",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/Git.sublime-settings",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/Side Bar.sublime-settings",
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/CMakeLists.txt",
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/README.md",
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/CMakeLists.txt",
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/camer_pc_TCP.cpp",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/C++.sublime-build"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sin",
+			"j",
+			"\"?\"",
+			"\"n\"",
+			"CV_8UC1",
+			"Popula"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1792,
+								1792
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "CMakeLists.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								326,
+								326
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 128.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "GeneticAlgorithmByC++ (Linux)",
+	"project": "GeneticAlgorithmByC++.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 159.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
