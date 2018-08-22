@@ -38,14 +38,6 @@ map
 string
 -
 
-/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/color.cc
-color.h
-/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/color.h
-cmath
--
-map
--
-
 /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/figure.cc
 figure.h
 /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/figure.h

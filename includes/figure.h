@@ -109,7 +109,7 @@ class Figure {
  public:
   Figure(View &view)
       : view_(view),
-        border_size_(100),
+        border_size_(50),
         background_color_(White),
         axis_color_(Black),
         sub_axis_color_(Light),
