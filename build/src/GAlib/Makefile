@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles /home/shisanchuan/C++work/GeneticAlgorithm/build/src/GAlib/CMakeFiles/progress.marks
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/GAlib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/GAlib/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,57 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/GAlib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/GAlib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named GA
+# Convenience name for target.
+src/GAlib/CMakeFiles/GAlib.dir/rule:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/GAlib/CMakeFiles/GAlib.dir/rule
+.PHONY : src/GAlib/CMakeFiles/GAlib.dir/rule
 
-# Build rule for target.
-GA: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GA
-.PHONY : GA
+# Convenience name for target.
+GAlib: src/GAlib/CMakeFiles/GAlib.dir/rule
 
-# fast build rule for target.
-GA/fast:
-	$(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/build
-.PHONY : GA/fast
-
-#=============================================================================
-# Target rules for targets named cvplotlib
-
-# Build rule for target.
-cvplotlib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cvplotlib
-.PHONY : cvplotlib
-
-# fast build rule for target.
-cvplotlib/fast:
-	$(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/build
-.PHONY : cvplotlib/fast
-
-#=============================================================================
-# Target rules for targets named GAlib
-
-# Build rule for target.
-GAlib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GAlib
 .PHONY : GAlib
 
 # fast build rule for target.
 GAlib/fast:
-	$(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/build
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/build
 .PHONY : GAlib/fast
+
+GA.o: GA.cpp.o
+
+.PHONY : GA.o
+
+# target to build an object file
+GA.cpp.o:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/GA.cpp.o
+.PHONY : GA.cpp.o
+
+GA.i: GA.cpp.i
+
+.PHONY : GA.i
+
+# target to preprocess a source file
+GA.cpp.i:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/GA.cpp.i
+.PHONY : GA.cpp.i
+
+GA.s: GA.cpp.s
+
+.PHONY : GA.s
+
+# target to generate assembly for a file
+GA.cpp.s:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/GA.cpp.s
+.PHONY : GA.cpp.s
 
 # Help Target
 help:
@@ -157,9 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... GA"
-	@echo "... cvplotlib"
 	@echo "... GAlib"
+	@echo "... GA.o"
+	@echo "... GA.i"
+	@echo "... GA.s"
 .PHONY : help
 
 
@@ -171,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

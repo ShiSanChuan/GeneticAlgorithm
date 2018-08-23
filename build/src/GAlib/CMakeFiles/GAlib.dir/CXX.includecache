@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../includes/GA.h
+iostream
+-
+algorithm
+-
+vector
+-
+functional
+-
+opencv2/opencv.hpp
+../includes/opencv2/opencv.hpp
+
+/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA.cpp
+GA.h
+/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA.h
+

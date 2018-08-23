@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/shisanchuan/C++work/GeneticAlgorithm/src/main.cpp" "/home/shisanchuan/C++work/GeneticAlgorithm/build/src/CMakeFiles/GA.dir/main.cpp.o"
+  "/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA.cpp" "/home/shisanchuan/C++work/GeneticAlgorithm/build/src/GAlib/CMakeFiles/GAlib.dir/GA.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,8 +16,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib/CMakeFiles/cvplotlib.dir/DependInfo.cmake"
-  "/home/shisanchuan/C++work/GeneticAlgorithm/build/src/GAlib/CMakeFiles/GAlib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

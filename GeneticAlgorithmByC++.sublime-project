@@ -23,6 +23,10 @@
 				{
 					"name": "cvplotlib",
 					"shell_cmd": "make -j4 cvplotlib"
+				},
+				{
+					"name": "GAlib",
+					"shell_cmd": "make -j4 GAlib"
 				}
 			],
 			"working_dir": "${project_path}/build"

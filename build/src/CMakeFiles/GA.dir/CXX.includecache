@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+../includes/GA.h
+iostream
+-
+algorithm
+-
+vector
+-
+functional
+-
+opencv2/opencv.hpp
+../includes/opencv2/opencv.hpp
+
 ../includes/color.h
 string
 -
@@ -59,4 +71,6 @@ cvplot.h
 /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplot.h
 opencv2/opencv.hpp
 /home/shisanchuan/C++work/GeneticAlgorithm/src/opencv2/opencv.hpp
+GA.h
+/home/shisanchuan/C++work/GeneticAlgorithm/src/GA.h
 

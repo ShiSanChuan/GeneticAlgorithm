@@ -85,6 +85,7 @@ src/GA: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.9
 src/GA: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.9
 src/GA: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.9
 src/GA: src/cvplotlib/libcvplotlib.a
+src/GA: src/GAlib/libGAlib.a
 src/GA: /usr/lib/x86_64-linux-gnu/libopencv_nonfree.so.2.4.9
 src/GA: /usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.9
 src/GA: /usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.9
