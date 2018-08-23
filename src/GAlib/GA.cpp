@@ -1,6 +1,7 @@
 #include "GA.h"
-GA::GA(std::function<float (float&)> _fun,const int _chrom_num,const int _gene_num,const float _p_recombin,
-	const float _p_mut,const float min,const float max){
+void GA::initparameter(const int _chrom_num,const int _gene_num,
+		const float _p_recombin,const float _p_mut,
+		const float min,const float max){
 	if(_chrom_num<=0||_gene_num<=0||
 		_p_mut<0||_p_mut>1||
 		_p_recombin<0||_p_recombin>1||
@@ -8,13 +9,24 @@ GA::GA(std::function<float (float&)> _fun,const int _chrom_num,const int _gene_n
 		std::cout<<"set GA parameter error,check it!\n";
 		exit(1);
 	}
-	fun=_fun;
 	chrom_num=_chrom_num;
 	gene_num=_gene_num;
 	p_recombin=_p_recombin;
 	p_mut=_p_mut;
 	search_min=min;
 	search_max=max;
+}
+
+GA::GA(std::function<float (float&)> _fun,const int _chrom_num,const int _gene_num,const float _p_recombin,
+	const float _p_mut,const float min,const float max){
+	initparameter(_chrom_num,_gene_num,_p_recombin,_p_mut,min,max);
+	fun=_fun;
+}
+GA::GA(std::function<float (float&,float&)> _fun,const int _chrom_num,const int _gene_num,const float _p_recombin,
+	const float _p_mut,const float min,const float max){
+	initparameter(_chrom_num,_gene_num,_p_recombin,_p_mut,min,max);
+	fun2=_fun;
+	
 }
 //生成随机0-1矩阵  Lind<2^32
 cv::Mat GA::crtbp(int Nind,int Lind){
@@ -39,6 +51,29 @@ std::pair<float, float> GA::ranking(std::vector<float> &objV,rank_menthod method
 							i=m;});
 	std::sort(objV.begin(), objV.end(),[&](float &a,float &b){if((a>b)^method)return true;else return false;});
 	return best;
+}
+//用来求二元最优值
+std::vector< std::pair<float, float> > GA::ranking(std::vector<float> &objV,std::vector<float> &objV2,rank_menthod method){
+	std::pair<float, float> best(0,-1.0/0.0);
+	std::pair<float, float> best2(0,-1.0/0.0);
+	std::vector<std::pair<float, float> > xyz_best;
+	for(int i=0;i<objV.size();i++)
+		for(int j=0;j<objV2.size();j++){
+			float m=fun2(objV[i],objV2[j]);
+			if((m>best.second)^method){
+				best.first=i;
+				best.second=m;
+				best2.first=j;
+				best2.second=m;
+			}
+			objV[i]=m;
+			objV2[j]=m;
+		}
+	std::sort(objV.begin(), objV.end(),[&](float &a,float &b){if((a>b)^method)return true;else return false;});
+	std::sort(objV2.begin(), objV2.end(),[&](float &a,float &b){if((a>b)^method)return true;else return false;});
+	xyz_best.push_back(best);
+	xyz_best.push_back(best2);
+	return xyz_best ;
 }
 //选择优秀个体 bug集中地
 void GA::select(cv::Mat &Popula,std::vector<float> &rank){

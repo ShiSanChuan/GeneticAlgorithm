@@ -5,10 +5,8 @@
 #include "cvplot.h"
 #include "opencv2/opencv.hpp"
 #include "GA.h"
-//Y=sin(X)
-int main(int argc, const char** argv)
-{
-	srand(time(NULL));
+//Y=x^2*sin(3X*pi)
+void demo1(){
 	cv::Mat Popula;
 	std::vector<float> ost;
 	std::vector<float> data;
@@ -18,7 +16,7 @@ int main(int argc, const char** argv)
 	Popula=ga.crtbp();
 	for(int i=0;i<20;i++){
 		ost=ga.bs2rv(Popula);
-
+		std::cout<<Popula.cols<<Popula.rows<<ost.size()<<std::endl;
 		recode.push_back(ga.ranking(ost));
 		data.push_back(recode[recode.size()-1].second);
 		ga.select(Popula, ost);
@@ -49,5 +47,12 @@ int main(int argc, const char** argv)
 		figure.border(30).show();
 	}
 	cv::waitKey(0);
+}
+
+
+int main(int argc, const char** argv)
+{
+	srand(time(NULL));
+	demo1();
 	return 0;
 }
