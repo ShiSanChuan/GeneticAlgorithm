@@ -39,28 +39,28 @@ cv::Mat GA::crtbp(int Nind,int Lind){
 	return Population;
 }
 //计算适应度
-std::pair<float, float> GA::ranking(std::vector<float> &objV,rank_menthod method){
+std::pair<float, float> GA::ranking(std::vector<float> &objV){
 	//lambada [this]表明是内部类
 	std::pair<float, float> best(0,-1.0/0.0);
-	std::for_each(objV.begin(), objV.end(),[this,&best,&method](float &i){
+	std::for_each(objV.begin(), objV.end(),[this,&best](float &i){
 							float m=fun(i);
-							if((m>best.second)^method){
+							if(m>best.second){
 								best.first=i;
 								best.second=m;
 							}   
 							i=m;});
-	std::sort(objV.begin(), objV.end(),[&](float &a,float &b){if((a>b)^method)return true;else return false;});
+	// std::sort(objV.begin(), objV.end(),[&](float &a,float &b){if((a>b)^method)return true;else return false;});
 	return best;
 }
 //用来求二元最优值
-std::vector< std::pair<float, float> > GA::ranking(std::vector<float> &objV,std::vector<float> &objV2,rank_menthod method){
+std::vector< std::pair<float, float> > GA::ranking(std::vector<float> &objV,std::vector<float> &objV2){
 	std::pair<float, float> best(0,-1.0/0.0);
 	std::pair<float, float> best2(0,-1.0/0.0);
 	std::vector<std::pair<float, float> > xyz_best;
 	for(int i=0;i<objV.size();i++)
 		for(int j=0;j<objV2.size();j++){
 			float m=fun2(objV[i],objV2[j]);
-			if((m>best.second)^method){
+			if((m>best.second)){
 				best.first=i;
 				best.second=m;
 				best2.first=j;
@@ -69,34 +69,40 @@ std::vector< std::pair<float, float> > GA::ranking(std::vector<float> &objV,std:
 			objV[i]=m;
 			objV2[j]=m;
 		}
-	std::sort(objV.begin(), objV.end(),[&](float &a,float &b){if((a>b)^method)return true;else return false;});
-	std::sort(objV2.begin(), objV2.end(),[&](float &a,float &b){if((a>b)^method)return true;else return false;});
+	// std::sort(objV.begin(), objV.end(),[&](float &a,float &b){if((a>b)^method)return true;else return false;});
+	// std::sort(objV2.begin(), objV2.end(),[&](float &a,float &b){if((a>b)^method)return true;else return false;});
 	xyz_best.push_back(best);
 	xyz_best.push_back(best2);
 	return xyz_best ;
 }
 //选择优秀个体 bug集中地
 void GA::select(cv::Mat &Popula,std::vector<float> &rank){
-	float sum=.0,base=std::abs(rank[rank.size()-1]);//拉高基准，使小于零的成员不会出现干扰
-	std::for_each(rank.begin(), rank.end(), [&](float & i){sum=sum+i+base;});
-	if(sum==0){
-		std::cout<<"lost aim,select fail!"<<std::endl;
-		return;
+	std::vector<std::pair<int, float> > recode_rank_index;
+	for(int i=0;i<rank.size();i++)//创建含下标的rank数据
+		recode_rank_index.push_back(std::pair<int, float>(i,rank[i]));
+	std::sort(recode_rank_index.begin(), recode_rank_index.end(),
+					[&](std::pair<int, float> &a,std::pair<int, float> &b){
+						if(a.second>b.second)return true;
+						else return false;
+					});	//排序
+	for(int i=0;i<recode_rank_index.size();i++){//修改数据
+		recode_rank_index[i].second=(recode_rank_index.size()-i)*(recode_rank_index.size()-i);
 	}
+	//0^2+1^2+2^2+...+n^2=n(n+1)(2n+1)/6 数学公式很重要的。。。
+	unsigned long int sum=(rank.size()*(rank.size()+1)*(2*rank.size()+1))/6;//使用另外一种排序和赌盘选择试试
+	// std::for_each(rank.begin(), rank.end(), [&](float & i){sum=sum+std::exp(i);});
 	std::vector<uchar> new_Popula;
 	//保留最优个体+赌盘选择
 	for(int i=0;i<Popula.cols;i++)
-			new_Popula.push_back(Popula.at<uchar>(0,i));
-		// std::cout<<"sum:"<<sum<<"\t"<<rank.size()<<std::endl;
+			new_Popula.push_back(Popula.at<uchar>(recode_rank_index[0].first,i));
 	for(int i=1;i<rank.size();i++){
-		float get_one=(float)(rand()%(int)(sum*1000000))/1000000;//不能使用 float 除数可惜。。
+		unsigned long int get_one=rand()%sum;//不能使用 float 除数可惜。。
 		int _select=0;
-		for(float add_sum=0;_select<rank.size();_select++)
-			if(add_sum<get_one)add_sum+=(rank[_select]+base);
+		for(unsigned long int add_sum=0;_select<recode_rank_index.size();_select++)
+			if(add_sum<get_one)add_sum+=recode_rank_index[_select].second;
 			else break;
-		// std::cout<<get_one<<"\t"<<_select<<std::endl;
 		for(int j=0;j<Popula.cols;j++)
-			new_Popula.push_back(Popula.at<uchar>(_select,j));
+			new_Popula.push_back(Popula.at<uchar>(recode_rank_index[_select].first,j));
 	}
 	int rows=Popula.rows,cols=Popula.cols;
 	Popula=cv::Mat(new_Popula);
@@ -134,9 +140,9 @@ std::vector<float> GA::bs2rv(cv::Mat &Popula,float min,float max){
 	unsigned long int Max=1;
 	Max<<=Popula.cols;Max--;
 	for(int i=0;i<Popula.rows;i++){
-		long int sum=0;
+		unsigned long int sum=0;
 		for(long int j=0,m=1;j<Popula.cols;j++,m*=2)
-			sum+=Popula.at<uchar>(i,j)*m;
+			if((bool)Popula.at<uchar>(i,j))sum+=m;
 		_ost.push_back(min+sum*((double)(max-min)/Max)); 
 	}
 	return _ost;

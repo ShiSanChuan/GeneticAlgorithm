@@ -14,9 +14,8 @@ void demo1(){
 	GA ga([](float &i)->float{return (i*i*std::sin(i*3*pi));});
 	//种群越大，越稳定，基因编码越多迭代越稳定
 	Popula=ga.crtbp();
-	for(int i=0;i<20;i++){
+	for(int i=0;i<40;i++){
 		ost=ga.bs2rv(Popula);
-		std::cout<<Popula.cols<<Popula.rows<<ost.size()<<std::endl;
 		recode.push_back(ga.ranking(ost));
 		data.push_back(recode[recode.size()-1].second);
 		ga.select(Popula, ost);
@@ -48,6 +47,57 @@ void demo1(){
 	}
 	cv::waitKey(0);
 }
+void demo2(){
+	cv::Mat Populax;
+	cv::Mat Populay;
+	std::vector<float> ostx;
+	std::vector<float> osty;
+	std::vector<float> data;
+	std::vector<std::pair<float, float> > temp;
+	std::vector<std::pair<float, float> > recodex;
+	std::vector<std::pair<float, float> > recodey;
+	GA ga([](float &x,float&y)->float{return (x*std::cos(2*pi*y)+y*std::sin(2*pi*x));},
+		40,20,0.1,0.2,-2,2);
+	//种群越大，越稳定，基因编码越多迭代越稳定
+	Populax=ga.crtbp();
+	Populay=ga.crtbp();
+	for(int i=0;i<20;i++){
+		ostx=ga.bs2rv(Populax);
+		osty=ga.bs2rv(Populay);
+		temp=ga.ranking(ostx,osty);
+		recodex.push_back(temp[0]);
+		recodey.push_back(temp[1]);
+		data.push_back(temp[0].second);
+		ga.select(Populax, ostx);
+		ga.select(Populay, osty);
+		ga.recombin(Populax);
+		ga.recombin(Populay);
+		ga.mut(Populax);
+		ga.mut(Populay);
+	}
+	//绘图
+	{
+		auto name="math";
+		cvplot::setWindowTitle(name,"origin curve");
+		cvplot::moveWindow(name, 0, 0);
+		cvplot::resizeWindow(name, 400, 400);
+		auto &figure=cvplot::figure(name);
+		figure.series("x-z").set(recodex).type(cvplot::Dots).color(cvplot::Green);
+		figure.series("y-z").set(recodey).type(cvplot::Dots).color(cvplot::Red);
+		figure.border(30).show(false);
+	}
+	{
+		auto name="GA";
+		cvplot::setWindowTitle(name,"GA");
+		cvplot::moveWindow(name, 400, 0);
+		cvplot::resizeWindow(name, 400, 400);
+		auto &figure=cvplot::figure(name);
+		figure.series("count").setValue(data).color(cvplot::Orange);
+		figure.border(30).show();
+	}
+	cv::waitKey(0);
+}
+
 
 
 int main(int argc, const char** argv)
