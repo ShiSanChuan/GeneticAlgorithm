@@ -1,7 +1,6 @@
 #include "GA.h"
-void GA::initparameter(const int _chrom_num,const int _gene_num,
-		const float _p_recombin,const float _p_mut,
-		const float min,const float max){
+GA::GA(const int _chrom_num,const int _gene_num,const float _p_recombin,
+	const float _p_mut,const float min,const float max,const int _para_num){
 	if(_chrom_num<=0||_gene_num<=0||
 		_p_mut<0||_p_mut>1||
 		_p_recombin<0||_p_recombin>1||
@@ -15,72 +14,46 @@ void GA::initparameter(const int _chrom_num,const int _gene_num,
 	p_mut=_p_mut;
 	search_min=min;
 	search_max=max;
+	para_num=_para_num;
 }
-
-GA::GA(std::function<float (float&)> _fun,const int _chrom_num,const int _gene_num,const float _p_recombin,
-	const float _p_mut,const float min,const float max){
-	initparameter(_chrom_num,_gene_num,_p_recombin,_p_mut,min,max);
+void GA::solve(float (*_fun)(std::vector<float> argv),const int &_para_num){
+	if(_para_num!=0)para_num=_para_num;
+	ost=cv::Mat(cv::Size(chrom_num,para_num+1),CV_32FC1,cv::Scalar(0));
 	fun=_fun;
 }
-GA::GA(std::function<float (float&,float&)> _fun,const int _chrom_num,const int _gene_num,const float _p_recombin,
-	const float _p_mut,const float min,const float max){
-	initparameter(_chrom_num,_gene_num,_p_recombin,_p_mut,min,max);
-	fun2=_fun;
-	
-}
 //生成随机0-1矩阵  Lind<2^32
-cv::Mat GA::crtbp(int Nind,int Lind){
-	if(Nind==0)Nind=chrom_num;
-	if(Lind==0)Lind=gene_num;
-	cv::Mat Population(cv::Size(Lind,Nind),CV_8UC1,cv::Scalar(0));
+cv::Mat GA::crtbp(const int &Nind,const int &Lind){
+	if(Nind>0)chrom_num=Nind;
+	if(Lind>0)gene_num=Lind;
+	if(gene_num%para_num!=0){std::cout<<"please set (Lind x para_num)!\n";};
+	cv::Mat Population(cv::Size(gene_num,chrom_num),CV_8UC1,cv::Scalar(0));
 	// cv::randu(Population, 0, 2);//并不随机。。
 	cv::RNG rng(time(NULL));
 	rng.fill(Population, cv::RNG::UNIFORM, 0, 2);//UNIFORM or NORMAL
 	return Population;
 }
 //计算适应度
-std::pair<float, float> GA::ranking(std::vector<float> &objV){
+std::pair<std::vector<float>, float> GA::ranking(void){
 	//lambada [this]表明是内部类
-	std::pair<float, float> best(0,-1.0/0.0);
-	std::for_each(objV.begin(), objV.end(),[this,&best](float &i){
-							float m=fun(i);
-							if(m>best.second){
-								best.first=i;
-								best.second=m;
-							}   
-							i=m;});
+	std::pair<std::vector<float> , float> best(std::vector<float>(0.0),-1.0/0.0);
+	for(int i=0;i<ost.cols;i++){
+		std::vector<float> argv;
+		for(int j=0;j<para_num;j++)
+			argv.push_back((float)ost.at<float>(j,i));
+		float m=fun(argv);
+		ost.at<float>(ost.rows-1,i)=m;
+		if(m>best.second){
+			best.first=argv;
+			best.second=m;
+		}
+	}
 	return best;
 }
-//用来求二元最优值
-std::vector< std::pair<float, float> > GA::ranking(std::vector<float> &objV,std::vector<float> &objV2){
-	std::pair<float, float> best(0,-1.0/0.0);
-	std::pair<float, float> best2(0,-1.0/0.0);
-	std::vector<float> tem1(objV.size(),-1.0/0.0);
-	std::vector<float> tem2(objV2.size(),-1.0/0.0);
-	std::vector<std::pair<float, float> > xyz_best;
-	for(int i=0;i<objV.size();i++)
-		for(int j=0;j<objV2.size();j++){
-			float m=fun2(objV[i],objV2[j]);
-			if((m>best.second)){
-				best.first=objV[i];
-				best.second=m;
-				best2.first=objV2[j];
-				best2.second=m;
-			}
-			if(tem1[i]<m)tem1[i]=m;
-			if(tem2[j]<m)tem2[j]=m;
-		}
-	xyz_best.push_back(best);
-	xyz_best.push_back(best2);
-	objV=tem1;
-	objV2=tem2;
-	return xyz_best ;
-}
 //选择优秀个体 bug集中地
-void GA::select(cv::Mat &Popula,std::vector<float> &rank){
+GA& GA::select(cv::Mat &Popula){
 	std::vector<std::pair<int, float> > recode_rank_index;
-	for(int i=0;i<rank.size();i++)//创建含下标的rank数据
-		recode_rank_index.push_back(std::pair<int, float>(i,rank[i]));
+	for(int i=0;i<ost.cols;i++)//创建含下标的rank数据
+		recode_rank_index.push_back(std::pair<int, float>(i,ost.at<float>(ost.rows-1,i)));
 	std::sort(recode_rank_index.begin(), recode_rank_index.end(),
 					[&](std::pair<int, float> &a,std::pair<int, float> &b){
 						if(a.second>b.second)return true;
@@ -90,13 +63,13 @@ void GA::select(cv::Mat &Popula,std::vector<float> &rank){
 		recode_rank_index[i].second=(recode_rank_index.size()-i)*(recode_rank_index.size()-i);
 	}
 	//0^2+1^2+2^2+...+n^2=n(n+1)(2n+1)/6 数学公式很重要的。。。
-	unsigned long int sum=(rank.size()*(rank.size()+1)*(2*rank.size()+1))/6;//使用另外一种排序和赌盘选择试试
+	unsigned long int sum=(ost.cols*(ost.cols+1)*(2*ost.cols+1))/6;//使用另外一种排序和赌盘选择试试
 	// std::for_each(rank.begin(), rank.end(), [&](float & i){sum=sum+std::exp(i);});
 	std::vector<uchar> new_Popula;
 	//保留最优个体+赌盘选择
 	for(int i=0;i<Popula.cols;i++)
 			new_Popula.push_back(Popula.at<uchar>(recode_rank_index[0].first,i));
-	for(int i=1;i<rank.size();i++){
+	for(int i=1;i<ost.cols;i++){
 		unsigned long int get_one=rand()%sum;//不能使用 float 除数可惜。。
 		int _select=0;
 		for(unsigned long int add_sum=0;_select<recode_rank_index.size();_select++)
@@ -108,12 +81,13 @@ void GA::select(cv::Mat &Popula,std::vector<float> &rank){
 	int rows=Popula.rows,cols=Popula.cols;
 	Popula=cv::Mat(new_Popula);
 	cv::resize(Popula, Popula, cv::Size(cols,rows));
+	return *this;
 }
 //交叉  均匀交叉
-void GA::recombin(cv::Mat &Popula,float opt){
-	if(opt==0)opt=p_recombin;
+GA& GA::recombin(cv::Mat &Popula,const float &opt){
+	if(opt>0&&opt<1)p_recombin=opt;
 	for(int i=0;i<Popula.rows;i++){
-		if(rand()%100<opt*100){
+		if(rand()%100<p_recombin*100){
 			int j=rand()%Popula.rows;
 			for(int k=0;k<Popula.cols;k++){
 				if(rand()%3<2){
@@ -124,27 +98,32 @@ void GA::recombin(cv::Mat &Popula,float opt){
 			}	
 		}
 	}
+	return *this;
 }
 //变异 因为概率建立在统计上，不使用迭代所有成员 均匀变异
-void GA::mut(cv::Mat &Popula,float opt){
-	if(opt==0)opt=p_mut;
-	for(int i=opt*Popula.cols*Popula.rows;i>0;i--){
+GA& GA::mut(cv::Mat &Popula,float opt){
+	if(opt>0&&opt<1)p_mut=opt;
+	for(int i=p_mut*Popula.cols*Popula.rows;i>0;i--){
 		int m=rand()%(Popula.cols*Popula.rows);
 		Popula.at<uchar>(m/Popula.cols,m%Popula.cols)^=1;
 	}
+	return *this;
 }
 //二进制转十进制 限定区间范围
-std::vector<float> GA::bs2rv(cv::Mat &Popula,float min,float max){
+void GA::bs2rv(cv::Mat &Popula,float min,float max){
 	if(min==0)min=search_min;
 	if(max==0)max=search_max;
-	std::vector<float> _ost;
-	unsigned long int Max=1;
-	Max<<=Popula.cols;Max--;
+	unsigned long int part=Popula.cols/para_num;
+	unsigned long int Max=(unsigned long int)1<<part;Max--;
 	for(int i=0;i<Popula.rows;i++){
-		unsigned long int sum=0;
-		for(long int j=0,m=1;j<Popula.cols;j++,m*=2)
-			if((bool)Popula.at<uchar>(i,j))sum+=m;
-		_ost.push_back(min+sum*((double)(max-min)/Max)); 
+		unsigned long int *sum=new unsigned long int[para_num]();
+		for(long int j=0,m=1;j<para_num*part;j++){
+			if((bool)Popula.at<uchar>(i,j))sum[j/part]+=m;
+			m*=2;
+			if(m>Max)m=1;
+		}
+		for(int j=0;j<para_num;j++)
+			ost.at<float>(j,i)=(min+sum[j]*((double)(max-min)/Max)); 
+		free(sum);
 	}
-	return _ost;
 }

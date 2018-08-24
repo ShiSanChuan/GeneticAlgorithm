@@ -67,6 +67,8 @@ algorithm
 -
 vector
 -
+cstdarg
+-
 cvplot.h
 /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplot.h
 opencv2/opencv.hpp

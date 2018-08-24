@@ -44,3 +44,16 @@ cd src/
 	- 在每次选择最优种群个体时，保护当前最优个体加上赌盘选择法可以加快迭代优化，并且增加稳定。
 	- C++中构造函数中不能再使用其它重载的构造函数，会失效。
 	- cv::Mat 的结构体，使用at时，返回的是一个template的量，因此在使用逻辑表达式的时候最好先强制转换一下。
+	- 使用cstdarg，C++可变参数函数：
+
+```cpp
+#include <cstdarg>
+void testarg(count,...){
+	va_list ap;
+	va_start(ap, count);
+	for(int i=0;i<count;i++)
+	std::cout<<(int)va_arg(ap, int)<<std::endl;;
+	va_end(ap);
+	return;
+}
+```

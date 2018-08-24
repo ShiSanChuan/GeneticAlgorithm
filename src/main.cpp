@@ -1,26 +1,30 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <cstdarg>
 // #include <iomanip> //控制cout 输出格式
 #include "cvplot.h"
 #include "opencv2/opencv.hpp"
 #include "GA.h"
 //Y=x^2*sin(3X*pi)
+float fun1(std::vector<float> argv){
+	float x=argv[0];
+	return (x*x*std::sin(3*pi*x));
+}
 void demo1(){
 	cv::Mat Popula;
-	std::vector<float> ost;
 	std::vector<float> data;
 	std::vector<std::pair<float, float> > recode;
-	GA ga([](float &i)->float{return (i*i*std::sin(i*3*pi));});
+	GA ga;
+	ga.solve(fun1,1);
 	//种群越大，越稳定，基因编码越多迭代越稳定
 	Popula=ga.crtbp();
-	for(int i=0;i<40;i++){
-		ost=ga.bs2rv(Popula);
-		recode.push_back(ga.ranking(ost));
+	for(int i=0;i<20;i++){
+		ga.bs2rv(Popula,0,10);
+		std::pair<std::vector<float>, float> best=ga.ranking();
+		recode.push_back(std::pair<float,float>((best.first[0]),best.second));
 		data.push_back(recode[recode.size()-1].second);
-		ga.select(Popula, ost);
-		ga.recombin(Popula);
-		ga.mut(Popula);
+		ga.select(Popula).recombin(Popula).mut(Popula);
 	}
 	//绘图
 	{
@@ -46,34 +50,29 @@ void demo1(){
 		figure.border(30).show();
 	}
 	cv::waitKey(0);
+
+}
+//(x*std::cos(2*pi*y)+y*std::sin(2*pi*x))
+float fun2(std::vector<float> argv){
+	float x=argv[0];
+	float y=argv[1];
+	return (x*std::cos(2*pi*y)+y*std::sin(2*pi*x));
 }
 void demo2(){
-	cv::Mat Populax;
-	cv::Mat Populay;
-	std::vector<float> ostx;
-	std::vector<float> osty;
+	cv::Mat Popula;
 	std::vector<float> data;
-	std::vector<std::pair<float, float> > temp;
-	std::vector<std::pair<float, float> > recodex;
-	std::vector<std::pair<float, float> > recodey;
-	GA ga([](float &x,float&y)->float{return (x*std::cos(2*pi*y)+y*std::sin(2*pi*x));},
-		40,20,0.1,0.2,-2,2);
+	std::vector<std::pair<float, float> > recodex,recodey;
+	GA ga(80,80);
+	ga.solve(fun2,2);
 	//种群越大，越稳定，基因编码越多迭代越稳定
-	Populax=ga.crtbp();
-	Populay=ga.crtbp();
-	for(int i=0;i<20;i++){
-		ostx=ga.bs2rv(Populax);
-		osty=ga.bs2rv(Populay);
-		temp=ga.ranking(ostx,osty);
-		recodex.push_back(temp[0]);
-		recodey.push_back(temp[1]);
-		data.push_back(temp[0].second);
-		ga.select(Populax, ostx);
-		ga.select(Populay, osty);
-		ga.recombin(Populax);
-		ga.recombin(Populay);
-		ga.mut(Populax);
-		ga.mut(Populay);
+	Popula=ga.crtbp();
+	for(int i=0;i<80;i++){
+		ga.bs2rv(Popula,-2,2);
+		std::pair<std::vector<float>, float> best=ga.ranking();
+		recodex.push_back(std::pair<float,float>((best.first[0]),best.second));
+		recodey.push_back(std::pair<float,float>((best.first[1]),best.second));
+		data.push_back(recodex[recodex.size()-1].second);
+		ga.select(Popula).recombin(Popula).mut(Popula);
 	}
 	//绘图
 	{
@@ -98,12 +97,10 @@ void demo2(){
 	cv::waitKey(0);
 }
 
-
-
 int main(int argc, const char** argv)
 {
 	srand(time(NULL));
 	demo1();
-	demo2();
+	// demo2();
 	return 0;
 }
