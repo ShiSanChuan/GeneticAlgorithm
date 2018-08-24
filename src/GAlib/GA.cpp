@@ -49,30 +49,31 @@ std::pair<float, float> GA::ranking(std::vector<float> &objV){
 								best.second=m;
 							}   
 							i=m;});
-	// std::sort(objV.begin(), objV.end(),[&](float &a,float &b){if((a>b)^method)return true;else return false;});
 	return best;
 }
 //用来求二元最优值
 std::vector< std::pair<float, float> > GA::ranking(std::vector<float> &objV,std::vector<float> &objV2){
 	std::pair<float, float> best(0,-1.0/0.0);
 	std::pair<float, float> best2(0,-1.0/0.0);
+	std::vector<float> tem1(objV.size(),-1.0/0.0);
+	std::vector<float> tem2(objV2.size(),-1.0/0.0);
 	std::vector<std::pair<float, float> > xyz_best;
 	for(int i=0;i<objV.size();i++)
 		for(int j=0;j<objV2.size();j++){
 			float m=fun2(objV[i],objV2[j]);
 			if((m>best.second)){
-				best.first=i;
+				best.first=objV[i];
 				best.second=m;
-				best2.first=j;
+				best2.first=objV2[j];
 				best2.second=m;
 			}
-			objV[i]=m;
-			objV2[j]=m;
+			if(tem1[i]<m)tem1[i]=m;
+			if(tem2[j]<m)tem2[j]=m;
 		}
-	// std::sort(objV.begin(), objV.end(),[&](float &a,float &b){if((a>b)^method)return true;else return false;});
-	// std::sort(objV2.begin(), objV2.end(),[&](float &a,float &b){if((a>b)^method)return true;else return false;});
 	xyz_best.push_back(best);
 	xyz_best.push_back(best2);
+	objV=tem1;
+	objV2=tem2;
 	return xyz_best ;
 }
 //选择优秀个体 bug集中地

@@ -104,5 +104,6 @@ int main(int argc, const char** argv)
 {
 	srand(time(NULL));
 	demo1();
+	demo2();
 	return 0;
 }
