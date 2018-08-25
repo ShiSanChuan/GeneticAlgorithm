@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/GA.dir/demo.cpp.o"
   "CMakeFiles/GA.dir/main.cpp.o"
   "GA.pdb"
   "GA"

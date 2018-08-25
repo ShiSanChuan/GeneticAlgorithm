@@ -125,6 +125,33 @@ GA/fast:
 	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/build
 .PHONY : GA/fast
 
+demo.o: demo.cpp.o
+
+.PHONY : demo.o
+
+# target to build an object file
+demo.cpp.o:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/demo.cpp.o
+.PHONY : demo.cpp.o
+
+demo.i: demo.cpp.i
+
+.PHONY : demo.i
+
+# target to preprocess a source file
+demo.cpp.i:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/demo.cpp.i
+.PHONY : demo.cpp.i
+
+demo.s: demo.cpp.s
+
+.PHONY : demo.s
+
+# target to generate assembly for a file
+demo.cpp.s:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/demo.cpp.s
+.PHONY : demo.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -161,6 +188,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... GA"
+	@echo "... demo.o"
+	@echo "... demo.i"
+	@echo "... demo.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

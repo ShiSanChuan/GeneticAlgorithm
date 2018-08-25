@@ -32,6 +32,8 @@ highgui.h
 window.h
 ../includes/window.h
 
+../includes/demo.h
+
 ../includes/figure.h
 color.h
 ../includes/color.h
@@ -75,4 +77,6 @@ opencv2/opencv.hpp
 /home/shisanchuan/C++work/GeneticAlgorithm/src/opencv2/opencv.hpp
 GA.h
 /home/shisanchuan/C++work/GeneticAlgorithm/src/GA.h
+demo.h
+/home/shisanchuan/C++work/GeneticAlgorithm/src/demo.h
 

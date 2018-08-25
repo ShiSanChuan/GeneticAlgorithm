@@ -70,17 +70,32 @@ src/GAlib/CMakeFiles/GAlib.dir/GA.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GAlib.dir/GA.cpp.s"
 	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/GAlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA.cpp -o CMakeFiles/GAlib.dir/GA.cpp.s
 
+src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.o: src/GAlib/CMakeFiles/GAlib.dir/flags.make
+src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.o: ../src/GAlib/GA_BP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.o"
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/GAlib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GAlib.dir/GA_BP.cpp.o -c /home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA_BP.cpp
+
+src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GAlib.dir/GA_BP.cpp.i"
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/GAlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA_BP.cpp > CMakeFiles/GAlib.dir/GA_BP.cpp.i
+
+src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GAlib.dir/GA_BP.cpp.s"
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/GAlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA_BP.cpp -o CMakeFiles/GAlib.dir/GA_BP.cpp.s
+
 # Object files for target GAlib
 GAlib_OBJECTS = \
-"CMakeFiles/GAlib.dir/GA.cpp.o"
+"CMakeFiles/GAlib.dir/GA.cpp.o" \
+"CMakeFiles/GAlib.dir/GA_BP.cpp.o"
 
 # External object files for target GAlib
 GAlib_EXTERNAL_OBJECTS =
 
 src/GAlib/libGAlib.a: src/GAlib/CMakeFiles/GAlib.dir/GA.cpp.o
+src/GAlib/libGAlib.a: src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.o
 src/GAlib/libGAlib.a: src/GAlib/CMakeFiles/GAlib.dir/build.make
 src/GAlib/libGAlib.a: src/GAlib/CMakeFiles/GAlib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libGAlib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libGAlib.a"
 	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/GAlib && $(CMAKE_COMMAND) -P CMakeFiles/GAlib.dir/cmake_clean_target.cmake
 	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/GAlib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GAlib.dir/link.txt --verbose=$(VERBOSE)
 

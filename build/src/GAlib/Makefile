@@ -152,6 +152,33 @@ GA.cpp.s:
 	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/GA.cpp.s
 .PHONY : GA.cpp.s
 
+GA_BP.o: GA_BP.cpp.o
+
+.PHONY : GA_BP.o
+
+# target to build an object file
+GA_BP.cpp.o:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.o
+.PHONY : GA_BP.cpp.o
+
+GA_BP.i: GA_BP.cpp.i
+
+.PHONY : GA_BP.i
+
+# target to preprocess a source file
+GA_BP.cpp.i:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.i
+.PHONY : GA_BP.cpp.i
+
+GA_BP.s: GA_BP.cpp.s
+
+.PHONY : GA_BP.s
+
+# target to generate assembly for a file
+GA_BP.cpp.s:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.s
+.PHONY : GA_BP.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -164,6 +191,9 @@ help:
 	@echo "... GA.o"
 	@echo "... GA.i"
 	@echo "... GA.s"
+	@echo "... GA_BP.o"
+	@echo "... GA_BP.i"
+	@echo "... GA_BP.s"
 .PHONY : help
 
 

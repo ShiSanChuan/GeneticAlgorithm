@@ -1,2 +1,2 @@
-/usr/bin/ar qc libGAlib.a  CMakeFiles/GAlib.dir/GA.cpp.o
+/usr/bin/ar qc libGAlib.a  CMakeFiles/GAlib.dir/GA.cpp.o CMakeFiles/GAlib.dir/GA_BP.cpp.o
 /usr/bin/ranlib libGAlib.a
