@@ -102,11 +102,11 @@ void demo2(){
 
 void demo3(){
 	std::vector<float> data;
-	float _input[2][3]={{0.1,.2,.3},{.4,.5,.6}};
+	float _input[2][3]={{1,2,3},{4,5,6}};
 	float _output[2][2]={{1.,2.},{3.,4.}};
 	cv::Mat input(cv::Size(3,2),CV_32FC1,_input);
 	cv::Mat output(cv::Size(2,2),CV_32FC1,_output);
-	GA_BP ga(1,440);
+	GA_BP ga(10,440);
 	cv::Mat Popula;
 	ga.BPsolve(input, output);
 	Popula=ga.crtbp();
@@ -114,12 +114,12 @@ void demo3(){
 		ga.bs2rv(Popula,0,4);
 		std::pair<std::vector<float>, float> best=ga.ranking();
 		data.push_back(best.second);
-		ga.select(Popula).recombin(Popula).mut(Popula);
+		ga.select(Popula,1).recombin(Popula).mut(Popula);
 	}
 	{
 		auto name="GA";
 		cvplot::setWindowTitle(name,"GA");
-		cvplot::moveWindow(name, 400, 0);
+		cvplot::moveWindow(name, 0, 0);
 		cvplot::resizeWindow(name, 400, 400);
 		auto &figure=cvplot::figure(name);
 		figure.series("count").setValue(data).color(cvplot::Orange);

@@ -14,9 +14,10 @@ protected:
 	float p_mut;
 	float search_min;
 	float search_max;
-	float (*fun)(std::vector<float> argv);
 	int para_num;
-	cv::Mat ost;//fun ,x,y,z....
+	cv::Mat ost;//fun ,x,y,z..
+private:
+	float (*fun)(std::vector<float> argv);
 public:
 	GA(const int _chrom_num=40,const int _gene_num=20,
 		const float _p_recombin=0.3,const float _p_mut=0.2,
@@ -25,7 +26,7 @@ public:
 	~GA(){};
 	cv::Mat crtbp(const int &Nind=0,const int &Lind=0);
 	std::pair<std::vector<float> , float> ranking(void);
-	GA& select(cv::Mat &Popula);
+	GA& select(cv::Mat &Popula,int _method=0);
 	GA& recombin(cv::Mat &Popula,const float &opt=0);
 	GA& mut(cv::Mat &Popula,float opt=0);
 	void bs2rv(cv::Mat &Popula,float min=0,float max=0);

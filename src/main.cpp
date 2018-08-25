@@ -12,7 +12,7 @@ int main(int argc, const char** argv)
 {
 	srand(time(NULL));
 	// demo1();
-	demo2();
-	// demo3();
+	// demo2();
+	demo3();
 	return 0;
 }

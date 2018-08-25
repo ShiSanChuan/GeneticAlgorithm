@@ -50,13 +50,13 @@ std::pair<std::vector<float>, float> GA::ranking(void){
 	return best;
 }
 //选择优秀个体 bug集中地
-GA& GA::select(cv::Mat &Popula){
+GA& GA::select(cv::Mat &Popula,int _method){
 	std::vector<std::pair<int, float> > recode_rank_index;
 	for(int i=0;i<ost.cols;i++)//创建含下标的rank数据
 		recode_rank_index.push_back(std::pair<int, float>(i,ost.at<float>(ost.rows-1,i)));
 	std::sort(recode_rank_index.begin(), recode_rank_index.end(),
 					[&](std::pair<int, float> &a,std::pair<int, float> &b){
-						if(a.second>b.second)return true;
+						if((a.second>b.second)^_method)return true;
 						else return false;
 					});	//排序
 	for(int i=0;i<recode_rank_index.size();i++){//修改数据
