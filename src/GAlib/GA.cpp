@@ -21,15 +21,16 @@ void GA::solve(float (*_fun)(std::vector<float> argv),const int &_para_num){
 	ost=cv::Mat(cv::Size(chrom_num,para_num+1),CV_32FC1,cv::Scalar(0));
 	fun=_fun;
 }
-//生成随机0-1矩阵  Lind<2^32
-cv::Mat GA::crtbp(const int &Nind,const int &Lind){
+//输入 种群数，基因数，最小编码，最大编码
+//输出生成随机0-1矩阵  Lind<2^32 
+cv::Mat GA::crtbp(const int &Nind,const int &Lind,const int&encodemin,const int &encodemax){
 	if(Nind>0)chrom_num=Nind;
 	if(Lind>0)gene_num=Lind;
 	if(gene_num%para_num!=0){std::cout<<"please set (Lind x para_num)!\n";};
 	cv::Mat Population(cv::Size(gene_num,chrom_num),CV_8UC1,cv::Scalar(0));
 	// cv::randu(Population, 0, 2);//并不随机。。
 	cv::RNG rng(time(NULL));
-	rng.fill(Population, cv::RNG::UNIFORM, 0, 2);//UNIFORM or NORMAL
+	rng.fill(Population, cv::RNG::UNIFORM,encodemin,encodemax);//UNIFORM or NORMAL
 	return Population;
 }
 //计算适应度
@@ -52,10 +53,11 @@ std::pair<std::vector<float>, float> GA::ranking(void){
 //选择优秀个体 bug集中地
 GA& GA::select(cv::Mat &Popula,int _method){
 	std::vector<std::pair<int, float> > recode_rank_index;
-	for(int i=0;i<ost.cols;i++)//创建含下标的rank数据
-		recode_rank_index.push_back(std::pair<int, float>(i,ost.at<float>(ost.rows-1,i)));
+	for(int i=0;i<ost.cols;i++)
+		recode_rank_index.push_back(std::pair<int, float>(i,(float)ost.at<float>(ost.rows-1,i)));
 	std::sort(recode_rank_index.begin(), recode_rank_index.end(),
 					[&](std::pair<int, float> &a,std::pair<int, float> &b){
+						if(a.second==b.second)return false;//??不呢为什么
 						if((a.second>b.second)^_method)return true;
 						else return false;
 					});	//排序
@@ -80,7 +82,8 @@ GA& GA::select(cv::Mat &Popula,int _method){
 	}
 	int rows=Popula.rows,cols=Popula.cols;
 	Popula=cv::Mat(new_Popula);
-	cv::resize(Popula, Popula, cv::Size(cols,rows));
+	// cv::resize(Popula, Popula, cv::Size(cols,rows));//使用有问题
+	Popula.reshape(0,rows).copyTo(Popula);
 	return *this;
 }
 //交叉  均匀交叉

@@ -7,3 +7,6 @@ src/GAlib/CMakeFiles/GAlib.dir/GA.cpp.o: ../src/GAlib/GA.cpp
 src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.o: ../includes/GA.h
 src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.o: ../src/GAlib/GA_BP.cpp
 
+src/GAlib/CMakeFiles/GAlib.dir/GA_TSP.cpp.o: ../includes/GA.h
+src/GAlib/CMakeFiles/GAlib.dir/GA_TSP.cpp.o: ../src/GAlib/GA_TSP.cpp
+

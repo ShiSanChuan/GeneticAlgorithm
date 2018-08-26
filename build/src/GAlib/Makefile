@@ -179,6 +179,33 @@ GA_BP.cpp.s:
 	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.s
 .PHONY : GA_BP.cpp.s
 
+GA_TSP.o: GA_TSP.cpp.o
+
+.PHONY : GA_TSP.o
+
+# target to build an object file
+GA_TSP.cpp.o:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/GA_TSP.cpp.o
+.PHONY : GA_TSP.cpp.o
+
+GA_TSP.i: GA_TSP.cpp.i
+
+.PHONY : GA_TSP.i
+
+# target to preprocess a source file
+GA_TSP.cpp.i:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/GA_TSP.cpp.i
+.PHONY : GA_TSP.cpp.i
+
+GA_TSP.s: GA_TSP.cpp.s
+
+.PHONY : GA_TSP.s
+
+# target to generate assembly for a file
+GA_TSP.cpp.s:
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/GA_TSP.cpp.s
+.PHONY : GA_TSP.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -194,6 +221,9 @@ help:
 	@echo "... GA_BP.o"
 	@echo "... GA_BP.i"
 	@echo "... GA_BP.s"
+	@echo "... GA_TSP.o"
+	@echo "... GA_TSP.i"
+	@echo "... GA_TSP.s"
 .PHONY : help
 
 

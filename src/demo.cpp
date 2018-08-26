@@ -127,3 +127,58 @@ void demo3(){
 	}
 	cv::waitKey(0);
 }
+void demo4(){
+	float _address[14][3]={{16.47,96.10},{16.47,94.44},
+						   {20.09,92.54},{22.39,93.37},
+						   {25.23,97.24},{22.00,96.05},
+						   {20.47,97.02},{17.20,96.29},
+						   {16.30,97.38},{14.05,98.12},
+						   {16.53,97.38},{21.52,95.59},
+						   {19.41,97.13},{20.09,92.55}};
+	std::vector<float> data;
+	std::vector<float> road_recode;
+	float min_distance=-1.0/0.0;
+	cv::Mat address(cv::Size(2,14),CV_32FC1,_address);
+	GA_TSP ga(40,address.rows);
+	cv::Mat Popula;
+	ga.TSPsolve(address);
+	Popula=ga.crtbp();
+	for(int i=0;i<300;i++){
+		std::pair<std::vector<float>, float> best=ga.ranking(Popula);
+		data.push_back(best.second);
+		if(best.second>min_distance){
+			road_recode=best.first;
+			min_distance=best.second;
+		}
+		ga.select(Popula,0).recombin(Popula,0.1).mut(Popula,0.3);
+	}
+	{
+		auto name="math";
+		cvplot::setWindowTitle(name,"best map");
+		cvplot::moveWindow(name, 0, 0);
+		cvplot::resizeWindow(name, 400, 400);
+		auto &figure=cvplot::figure(name);
+		figure.origin(false, false);
+		std::vector<std::pair<float, float> > recode;
+		for(int i=0;i<road_recode.size();i++)
+			recode.push_back(std::pair<float,float>(
+				_address[(int)road_recode[i]][0],_address[(int)road_recode[i]][1]));
+		recode.push_back(std::pair<float,float>(
+				_address[(int)road_recode[0]][0],_address[(int)road_recode[0]][1]));
+		figure.series("line").set(recode).color(cvplot::Green);
+		figure.series("point").set(recode).type(cvplot::Dots).color(cvplot::Red);
+		
+		figure.border(30).show(false);
+	}
+	{
+		auto name="GA";
+		cvplot::setWindowTitle(name,"GA");
+		cvplot::moveWindow(name, 400, 0);
+		cvplot::resizeWindow(name, 400, 400);
+		auto &figure=cvplot::figure(name);
+		std::sort(data.begin(), data.end(), [](float &a,float &b){if(a<b)return true;else return false;});
+		figure.series("count").setValue(data).color(cvplot::Orange);
+		figure.border(25).show();
+	}
+	cv::waitKey(0);
+}

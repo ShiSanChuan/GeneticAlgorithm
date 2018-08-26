@@ -13,6 +13,7 @@ int main(int argc, const char** argv)
 	srand(time(NULL));
 	// demo1();
 	// demo2();
-	demo3();
+	// demo3();
+	demo4();
 	return 0;
 }

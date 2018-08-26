@@ -1,22 +1,4 @@
 #include "GA.h"
-GA_BP::GA_BP(const int _chrom_num,const int _gene_num,
-		const float _p_recombin,const float _p_mut,
-		const float min,const float max,const int _para_num){
-	if(_chrom_num<=0||_gene_num<=0||
-		_p_mut<0||_p_mut>1||
-		_p_recombin<0||_p_recombin>1||
-		max<=min){
-		std::cout<<"set GA parameter error,check it!\n";
-		exit(1);
-	}
-	chrom_num=_chrom_num;
-	gene_num=_gene_num;
-	p_recombin=_p_recombin;
-	p_mut=_p_mut;
-	search_min=min;
-	search_max=max;
-	para_num=_para_num;
-}
 //y=fun(x*w+b)
 void GA_BP::BPsolve(cv::Mat &_input,cv::Mat &_output){
 	input=_input;
