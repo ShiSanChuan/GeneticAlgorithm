@@ -50,6 +50,12 @@ cv::Mat GA_TSP::crtbp(int encodemax){
 GA_TSP& GA_TSP::recombin(cv::Mat &Popula,const float &opt){
 	if(opt>0&&opt<1)p_recombin=opt;
 	uchar * tem=new uchar[2*Popula.cols];
+	for(int i=1;i<10;i++){
+		uchar *gene1=Popula.ptr<uchar>(0);
+		uchar *gene2=Popula.ptr<uchar>(Popula.rows-i);
+		memcpy(gene2,gene1,sizeof(uchar)*Popula.cols);
+	}
+
 	for(int i=0;i<Popula.rows;i++){
 		if(rand()%100<p_recombin*100){
 			uchar *gene=Popula.ptr<uchar>(i);
@@ -64,7 +70,8 @@ GA_TSP& GA_TSP::recombin(cv::Mat &Popula,const float &opt){
 //变异
 GA_TSP& GA_TSP::mut(cv::Mat &Popula,float opt){
 	if(opt>0&&opt<1)p_mut=opt;
-	for(int i=0;i<Popula.rows;i++){
+	for(int i=1;i<Popula.rows;i++){
+		if(rand()%100>opt*100)
 		for(int j=0;j<p_mut*Popula.cols;j++){
 			uchar *p=Popula.ptr<uchar>(i);
 			uchar *a=p+rand()%Popula.cols;

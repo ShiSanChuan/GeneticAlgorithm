@@ -129,28 +129,27 @@ void demo3(){
 }
 void demo4(){
 	float _address[14][3]={{16.47,96.10},{16.47,94.44},
-						   {20.09,92.54},{22.39,93.37},
-						   {25.23,97.24},{22.00,96.05},
+						   {22.39,93.37},{25.23,97.24},
 						   {20.47,97.02},{17.20,96.29},
-						   {16.30,97.38},{14.05,98.12},
+						   {14.05,98.12},{22.00,96.05},
 						   {16.53,97.38},{21.52,95.59},
 						   {19.41,97.13},{20.09,92.55}};
 	std::vector<float> data;
 	std::vector<float> road_recode;
 	float min_distance=-1.0/0.0;
-	cv::Mat address(cv::Size(2,14),CV_32FC1,_address);
-	GA_TSP ga(40,address.rows);
+	cv::Mat address(cv::Size(2,12),CV_32FC1,_address);
+	GA_TSP ga(100,address.rows);
 	cv::Mat Popula;
 	ga.TSPsolve(address);
 	Popula=ga.crtbp();
-	for(int i=0;i<300;i++){
+	for(int i=0;i<200;i++){
 		std::pair<std::vector<float>, float> best=ga.ranking(Popula);
 		data.push_back(best.second);
 		if(best.second>min_distance){
 			road_recode=best.first;
 			min_distance=best.second;
 		}
-		ga.select(Popula,0).recombin(Popula,0.1).mut(Popula,0.3);
+		ga.select(Popula,0).recombin(Popula,0.1).mut(Popula,0.5);
 	}
 	{
 		auto name="math";
