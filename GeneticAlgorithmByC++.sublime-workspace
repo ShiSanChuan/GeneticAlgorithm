@@ -4,6 +4,70 @@
 		"selected_items":
 		[
 			[
+				"gen",
+				"gene1"
+			],
+			[
+				"a",
+				"assign\tvoid assign(size_type __n, const value_type &__val)"
+			],
+			[
+				"P",
+				"Popula"
+			],
+			[
+				"Po",
+				"Popula"
+			],
+			[
+				"CV8",
+				"CV_8UC1\tCV_8UC1"
+			],
+			[
+				"tran",
+				"transpose\tvoid transpose(InputArray src, OutputArray dst)"
+			],
+			[
+				"dis",
+				"distance"
+			],
+			[
+				"be",
+				"best"
+			],
+			[
+				"inde",
+				"indexi\tint indexi"
+			],
+			[
+				"row",
+				"rowRange\tcv::Mat rowRange(int startrow, int endrow) const"
+			],
+			[
+				"Poi",
+				"Point2d\tPoint2d"
+			],
+			[
+				"Point",
+				"Point2d\tPoint2d"
+			],
+			[
+				"sq",
+				"sqrt\tdouble sqrt(double __x)"
+			],
+			[
+				"Poin",
+				"Point2d\tPoint2d"
+			],
+			[
+				"CV",
+				"CV_32FC1"
+			],
+			[
+				"_p",
+				"_p_mut"
+			],
+			[
 				"GA",
 				"GA_TSP"
 			],
@@ -46,10 +110,6 @@
 			[
 				"in_im",
 				"in_imp_b\tcv::Mat in_imp_b"
-			],
-			[
-				"row",
-				"rowRange\tcv::Mat rowRange(int startrow, int endrow) const"
 			],
 			[
 				"in",
@@ -132,14 +192,6 @@
 				"best\tstd::pair<float, float> best"
 			],
 			[
-				"_p",
-				"_para_num"
-			],
-			[
-				"Poi",
-				"Point2f\tPoint2f"
-			],
-			[
 				"se",
 				"setValue\tcvplot::Series & setValue(const std::vector<Point2> &values)"
 			],
@@ -188,10 +240,6 @@
 				"Population\tcv::Mat Population"
 			],
 			[
-				"Po",
-				"Popula"
-			],
-			[
 				"for",
 				"for_each\t_Function for_each(_InputIterator __first, _InputIterator __last, _Function __f)"
 			],
@@ -223,16 +271,7 @@
 			"file": "src/main.cpp",
 			"settings":
 			{
-				"buffer_size": 308,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/demo.cpp",
-			"settings":
-			{
-				"buffer_size": 4220,
+				"buffer_size": 321,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -241,7 +280,7 @@
 			"file": "includes/demo.h",
 			"settings":
 			{
-				"buffer_size": 110,
+				"buffer_size": 130,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -250,16 +289,7 @@
 			"file": "includes/GA.h",
 			"settings":
 			{
-				"buffer_size": 1705,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/GAlib/GA_TSP.cpp",
-			"settings":
-			{
-				"buffer_size": 1195,
+				"buffer_size": 2108,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -268,7 +298,7 @@
 			"file": "src/GAlib/GA_BP.cpp",
 			"settings":
 			{
-				"buffer_size": 1983,
+				"buffer_size": 1517,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -277,7 +307,16 @@
 			"file": "src/GAlib/GA.cpp",
 			"settings":
 			{
-				"buffer_size": 4272,
+				"buffer_size": 4447,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/GAlib/GA_TSP.cpp",
+			"settings":
+			{
+				"buffer_size": 2596,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -350,12 +389,28 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 202.0,
-		"last_filter": "git push",
+		"height": 334.0,
+		"last_filter": "ter",
 		"selected_items":
 		[
 			[
+				"ter",
+				"Terminal View: Open Bash Terminal"
+			],
+			[
 				"git push",
+				"Git: Push"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git a",
+				"Git: Add All"
+			],
+			[
+				"git pus",
 				"Git: Push"
 			],
 			[
@@ -367,15 +422,7 @@
 				"Git: Add All"
 			],
 			[
-				"git pus",
-				"Git: Push"
-			],
-			[
 				"git add",
-				"Git: Add All"
-			],
-			[
-				"git a",
 				"Git: Add All"
 			],
 			[
@@ -407,15 +454,11 @@
 				"Git: Add All"
 			],
 			[
-				"git co",
-				"Git: Commit"
-			],
-			[
 				"clang",
 				"EasyClangComplete: Settings"
 			]
 		],
-		"width": 588.0
+		"width": 568.0
 	},
 	"console":
 	{
@@ -436,11 +479,15 @@
 	"expanded_folders":
 	[
 		"/home/shisanchuan/C++work/GeneticAlgorithm",
-		"/home/shisanchuan/C++work/GeneticAlgorithm/src"
+		"/home/shisanchuan/C++work/GeneticAlgorithm/includes"
 	],
 	"file_history":
 	[
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/C++.sublime-build",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/demo.cpp",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/README.md",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/User/SublimeGDB.sublime-settings",
+		"/home/shisanchuan/.config/sublime-text-3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA.cpp",
 		"/usr/include/c++/5/bits/stl_algo.h",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/figure.cc",
@@ -450,7 +497,6 @@
 		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/CMakeLists.txt",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/figure.h",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/window.h",
-		"/home/shisanchuan/.config/sublime-text-3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/GeneticAlgorithmByC++.sublime-project",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/CMakeLists.txt",
 		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/src/cvplotlib/figure.cc",
@@ -471,12 +517,11 @@
 		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/CMakeLists.txt",
 		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/README.md",
 		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/CMakeLists.txt",
-		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/camer_pc_TCP.cpp",
-		"/home/shisanchuan/.config/sublime-text-3/Packages/User/C++.sublime-build"
+		"/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/camer_pc_TCP.cpp"
 	],
 	"find":
 	{
-		"height": 47.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -490,6 +535,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"float",
 			"rowRange",
 			"opt",
 			"fun",
@@ -528,7 +574,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -537,15 +583,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 308,
+						"buffer_size": 321,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								292,
-								292
+								297,
+								297
 							]
 						],
 						"settings":
@@ -557,33 +603,32 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/demo.cpp",
+					"file": "includes/demo.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4220,
+						"buffer_size": 130,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3921,
-								3921
+								98,
+								98
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2394.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -591,47 +636,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "includes/demo.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 110,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								76,
-								76
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "includes/GA.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1705,
+						"buffer_size": 2108,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1607,
-								1607
+								1816,
+								1816
 							]
 						],
 						"settings":
@@ -640,7 +657,36 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 630.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/GAlib/GA_BP.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15,
+								15
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 4.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -648,27 +694,57 @@
 				},
 				{
 					"buffer": 4,
-					"file": "src/GAlib/GA_TSP.cpp",
+					"file": "src/GAlib/GA.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1195,
+						"buffer_size": 4447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1052,
-								1052
+								2116,
+								2116
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 252.0,
+						"translation.y": 900.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/GAlib/GA_TSP.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1774,
+								1774
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 900.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -677,72 +753,14 @@
 			]
 		},
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 5,
-					"file": "src/GAlib/GA_BP.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1983,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								935,
-								935
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/GAlib/GA.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4272,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1097,
-								1097
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 315.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 29.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -759,28 +777,28 @@
 				1
 			],
 			[
-				1,
 				0,
-				2,
-				1
+				1,
+				1,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.5,
 			1.0
 		]
 	},
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 134.0
+		"height": 148.0
 	},
 	"output.find_results":
 	{
@@ -798,7 +816,7 @@
 	"project": "GeneticAlgorithmByC++.sublime-project",
 	"replace":
 	{
-		"height": 54.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -828,7 +846,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

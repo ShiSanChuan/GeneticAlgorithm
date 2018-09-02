@@ -128,7 +128,7 @@ void demo3(){
 	cv::waitKey(0);
 }
 void demo4(){
-	float _address[14][3]={{16.47,96.10},{16.47,94.44},
+	float _address[14][2]={{16.47,96.10},{16.47,94.44},
 						   {22.39,93.37},{25.23,97.24},
 						   {20.47,97.02},{17.20,96.29},
 						   {14.05,98.12},{22.00,96.05},
@@ -142,7 +142,7 @@ void demo4(){
 	cv::Mat Popula;
 	ga.TSPsolve(address);
 	Popula=ga.crtbp();
-	for(int i=0;i<200;i++){
+	for(int i=0;i<400;i++){
 		std::pair<std::vector<float>, float> best=ga.ranking(Popula);
 		data.push_back(best.second);
 		if(best.second>min_distance){

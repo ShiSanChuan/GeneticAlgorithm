@@ -24,7 +24,7 @@ std::pair<std::vector<float>, float> GA_TSP::ranking(cv::Mat &_Popula){
 		for(int j=1;j<_Popula.cols;j++)
 			_distance+=distance(_Popula.at<uchar>(i,j-1),_Popula.at<uchar>(i,j));
 		_distance+=distance(_Popula.at<uchar>(i,0),_Popula.at<uchar>(i,_Popula.cols-1));
-		ost.at<float>(0,i)=1/_distance;
+		ost.at<float>(0,i)=1/_distance;//按距离的倒数评分，越大距离越短
 		if(1/_distance>best.second){
 			best.second=1/_distance;
 			std::vector<float> argv;
@@ -50,7 +50,7 @@ cv::Mat GA_TSP::crtbp(int encodemax){
 GA_TSP& GA_TSP::recombin(cv::Mat &Popula,const float &opt){
 	if(opt>0&&opt<1)p_recombin=opt;
 	uchar * tem=new uchar[2*Popula.cols];
-	for(int i=1;i<10;i++){
+	for(int i=1;i<10;i++){//保护最优，并复制最优
 		uchar *gene1=Popula.ptr<uchar>(0);
 		uchar *gene2=Popula.ptr<uchar>(Popula.rows-i);
 		memcpy(gene2,gene1,sizeof(uchar)*Popula.cols);
