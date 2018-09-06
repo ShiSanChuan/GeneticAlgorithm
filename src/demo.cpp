@@ -181,3 +181,45 @@ void demo4(){
 	}
 	cv::waitKey(0);
 }
+/**
+ * 求解目标是 fun2二元表达式
+ */
+void demo5(void){
+	cv::Mat Popula;
+	std::vector<float> data;
+	std::vector<std::pair<float, float> > recodex,recodey;
+	QGA ga(80,80);
+	ga.solve(fun2,2);
+	//种群越大，越稳定，基因编码越多迭代越稳定
+	Popula=ga.crtbp();
+	for(int i=0;i<80;i++){
+		ga.bs2rv(Popula,-2,2);
+		std::pair<std::vector<float>, float> best=ga.ranking();
+		recodex.push_back(std::pair<float,float>((best.first[0]),best.second));
+		recodey.push_back(std::pair<float,float>((best.first[1]),best.second));
+		data.push_back(recodex[recodex.size()-1].second);
+		ga.select(Popula);
+	}
+	//绘图
+	{
+		auto name="math";
+		cvplot::setWindowTitle(name,"origin curve");
+		cvplot::moveWindow(name, 0, 0);
+		cvplot::resizeWindow(name, 400, 400);
+		auto &figure=cvplot::figure(name);
+		figure.series("x-z").set(recodex).type(cvplot::Dots).color(cvplot::Green);
+		figure.series("y-z").set(recodey).type(cvplot::Dots).color(cvplot::Red);
+		figure.border(30).show(false);
+	}
+	{
+		auto name="GA";
+		cvplot::setWindowTitle(name,"GA");
+		cvplot::moveWindow(name, 400, 0);
+		cvplot::resizeWindow(name, 400, 400);
+		auto &figure=cvplot::figure(name);
+		std::sort(data.begin(), data.end(), [](float &a,float &b){if(a<b)return true;else return false;});
+		figure.series("count").setValue(data).color(cvplot::Orange);
+		figure.border(30).show();
+	}
+	cv::waitKey(0);
+}

@@ -18,7 +18,7 @@ functional
 opencv2/opencv.hpp
 ../includes/opencv2/opencv.hpp
 
-/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA_TSP.cpp
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/GAlib/QGA.cpp
 GA.h
-/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA.h
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/GAlib/GA.h
 

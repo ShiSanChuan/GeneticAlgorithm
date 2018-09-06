@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /opt/cmake-3.12.0/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
+RM = /opt/cmake-3.12.0/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shisanchuan/C++work/GeneticAlgorithm
+CMAKE_SOURCE_DIR = /home/shisanchuan/C++_work/GeneticAlgorithm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shisanchuan/C++work/GeneticAlgorithm/build
+CMAKE_BINARY_DIR = /home/shisanchuan/C++_work/GeneticAlgorithm/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/shisanchuan/C++work/GeneticAlgorithm/build
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/cmake-3.12.0/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/opt/cmake-3.12.0/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib/CMakeFiles/progress.marks
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/cvplotlib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles 0
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib/CMakeFiles/progress.marks
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/cvplotlib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/cvplotlib/clean
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/cvplotlib/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/cvplotlib/preinstall
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/cvplotlib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/cvplotlib/preinstall
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/cvplotlib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/cvplotlib/CMakeFiles/cvplotlib.dir/rule:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/cvplotlib/CMakeFiles/cvplotlib.dir/rule
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/cvplotlib/CMakeFiles/cvplotlib.dir/rule
 .PHONY : src/cvplotlib/CMakeFiles/cvplotlib.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ cvplotlib: src/cvplotlib/CMakeFiles/cvplotlib.dir/rule
 
 # fast build rule for target.
 cvplotlib/fast:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/build
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/build
 .PHONY : cvplotlib/fast
 
 color.o: color.cc.o
@@ -131,7 +131,7 @@ color.o: color.cc.o
 
 # target to build an object file
 color.cc.o:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/color.cc.o
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/color.cc.o
 .PHONY : color.cc.o
 
 color.i: color.cc.i
@@ -140,7 +140,7 @@ color.i: color.cc.i
 
 # target to preprocess a source file
 color.cc.i:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/color.cc.i
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/color.cc.i
 .PHONY : color.cc.i
 
 color.s: color.cc.s
@@ -149,7 +149,7 @@ color.s: color.cc.s
 
 # target to generate assembly for a file
 color.cc.s:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/color.cc.s
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/color.cc.s
 .PHONY : color.cc.s
 
 figure.o: figure.cc.o
@@ -158,7 +158,7 @@ figure.o: figure.cc.o
 
 # target to build an object file
 figure.cc.o:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/figure.cc.o
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/figure.cc.o
 .PHONY : figure.cc.o
 
 figure.i: figure.cc.i
@@ -167,7 +167,7 @@ figure.i: figure.cc.i
 
 # target to preprocess a source file
 figure.cc.i:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/figure.cc.i
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/figure.cc.i
 .PHONY : figure.cc.i
 
 figure.s: figure.cc.s
@@ -176,7 +176,7 @@ figure.s: figure.cc.s
 
 # target to generate assembly for a file
 figure.cc.s:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/figure.cc.s
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/figure.cc.s
 .PHONY : figure.cc.s
 
 highgui.o: highgui.cc.o
@@ -185,7 +185,7 @@ highgui.o: highgui.cc.o
 
 # target to build an object file
 highgui.cc.o:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.o
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.o
 .PHONY : highgui.cc.o
 
 highgui.i: highgui.cc.i
@@ -194,7 +194,7 @@ highgui.i: highgui.cc.i
 
 # target to preprocess a source file
 highgui.cc.i:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.i
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.i
 .PHONY : highgui.cc.i
 
 highgui.s: highgui.cc.s
@@ -203,7 +203,7 @@ highgui.s: highgui.cc.s
 
 # target to generate assembly for a file
 highgui.cc.s:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.s
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.s
 .PHONY : highgui.cc.s
 
 window.o: window.cc.o
@@ -212,7 +212,7 @@ window.o: window.cc.o
 
 # target to build an object file
 window.cc.o:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.o
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.o
 .PHONY : window.cc.o
 
 window.i: window.cc.i
@@ -221,7 +221,7 @@ window.i: window.cc.i
 
 # target to preprocess a source file
 window.cc.i:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.i
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.i
 .PHONY : window.cc.i
 
 window.s: window.cc.s
@@ -230,7 +230,7 @@ window.s: window.cc.s
 
 # target to generate assembly for a file
 window.cc.s:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.s
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.s
 .PHONY : window.cc.s
 
 # Help Target
@@ -265,6 +265,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

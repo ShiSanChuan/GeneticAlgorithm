@@ -389,10 +389,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 334.0,
-		"last_filter": "ter",
+		"height": 400.0,
+		"last_filter": "Package Control: ",
 		"selected_items":
 		[
+			[
+				"Package Control: ",
+				"Package Control: Upgrade Package"
+			],
 			[
 				"ter",
 				"Terminal View: Open Bash Terminal"
@@ -438,10 +442,6 @@
 				"Git: Add Current File"
 			],
 			[
-				"Package Control: ",
-				"Package Control: Install Package"
-			],
-			[
 				"git  pus",
 				"Git: Push"
 			],
@@ -458,7 +458,7 @@
 				"EasyClangComplete: Settings"
 			]
 		],
-		"width": 568.0
+		"width": 529.0
 	},
 	"console":
 	{
@@ -478,8 +478,7 @@
 	},
 	"expanded_folders":
 	[
-		"/home/shisanchuan/C++work/GeneticAlgorithm",
-		"/home/shisanchuan/C++work/GeneticAlgorithm/includes"
+		"/home/shisanchuan/C++_work/GeneticAlgorithm"
 	],
 	"file_history":
 	[
@@ -590,12 +589,14 @@
 						"selection":
 						[
 							[
-								297,
-								297
+								258,
+								258
 							]
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C++.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -625,6 +626,8 @@
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
@@ -653,6 +656,8 @@
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C++.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -682,6 +687,7 @@
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
 							"syntax": "Packages/C++/C++.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -711,6 +717,8 @@
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C++.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -740,6 +748,8 @@
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C++.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -750,11 +760,6 @@
 					"stack_index": 1,
 					"type": "text"
 				}
-			]
-		},
-		{
-			"sheets":
-			[
 			]
 		}
 	],
@@ -775,12 +780,6 @@
 				0,
 				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
 			]
 		],
 		"cols":
@@ -791,7 +790,6 @@
 		"rows":
 		[
 			0.0,
-			0.5,
 			1.0
 		]
 	},

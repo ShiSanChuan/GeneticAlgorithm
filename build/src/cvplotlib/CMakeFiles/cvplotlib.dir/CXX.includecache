@@ -38,23 +38,31 @@ map
 string
 -
 
-/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/figure.cc
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/color.cc
+color.h
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/color.h
+cmath
+-
+map
+-
+
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/figure.cc
 figure.h
-/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/figure.h
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/figure.h
 window.h
-/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/window.h
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/window.h
 internal.h
-/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/internal.h
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/internal.h
 opencv2/imgproc/imgproc.hpp
 -
 
-/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/highgui.cc
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/highgui.cc
 highgui.h
-/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/highgui.h
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/highgui.h
 opencv2/highgui/highgui.hpp
 -
 
-/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/internal.h
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/internal.h
 opencv2/core/core.hpp
 -
 iomanip
@@ -62,11 +70,11 @@ iomanip
 iostream
 -
 
-/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/window.cc
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/window.cc
 window.h
-/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/window.h
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/window.h
 internal.h
-/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/internal.h
+/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/internal.h
 opencv2/highgui/highgui.hpp
 -
 opencv2/imgproc/imgproc.hpp

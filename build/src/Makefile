@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /opt/cmake-3.12.0/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
+RM = /opt/cmake-3.12.0/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shisanchuan/C++work/GeneticAlgorithm
+CMAKE_SOURCE_DIR = /home/shisanchuan/C++_work/GeneticAlgorithm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shisanchuan/C++work/GeneticAlgorithm/build
+CMAKE_BINARY_DIR = /home/shisanchuan/C++_work/GeneticAlgorithm/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/shisanchuan/C++work/GeneticAlgorithm/build
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/cmake-3.12.0/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/opt/cmake-3.12.0/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles /home/shisanchuan/C++work/GeneticAlgorithm/build/src/CMakeFiles/progress.marks
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles 0
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/CMakeFiles/progress.marks
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/GA.dir/rule:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/GA.dir/rule
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/GA.dir/rule
 .PHONY : src/CMakeFiles/GA.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ GA: src/CMakeFiles/GA.dir/rule
 
 # fast build rule for target.
 GA/fast:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/build
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/build
 .PHONY : GA/fast
 
 demo.o: demo.cpp.o
@@ -131,7 +131,7 @@ demo.o: demo.cpp.o
 
 # target to build an object file
 demo.cpp.o:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/demo.cpp.o
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/demo.cpp.o
 .PHONY : demo.cpp.o
 
 demo.i: demo.cpp.i
@@ -140,7 +140,7 @@ demo.i: demo.cpp.i
 
 # target to preprocess a source file
 demo.cpp.i:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/demo.cpp.i
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/demo.cpp.i
 .PHONY : demo.cpp.i
 
 demo.s: demo.cpp.s
@@ -149,7 +149,7 @@ demo.s: demo.cpp.s
 
 # target to generate assembly for a file
 demo.cpp.s:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/demo.cpp.s
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/demo.cpp.s
 .PHONY : demo.cpp.s
 
 main.o: main.cpp.o
@@ -158,7 +158,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/main.cpp.o
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -167,7 +167,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/main.cpp.i
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -176,7 +176,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/main.cpp.s
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -205,6 +205,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

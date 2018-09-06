@@ -50,19 +50,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /opt/cmake-3.12.0/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
+RM = /opt/cmake-3.12.0/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shisanchuan/C++work/GeneticAlgorithm
+CMAKE_SOURCE_DIR = /home/shisanchuan/C++_work/GeneticAlgorithm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shisanchuan/C++work/GeneticAlgorithm/build
+CMAKE_BINARY_DIR = /home/shisanchuan/C++_work/GeneticAlgorithm/build
 
 #=============================================================================
 # Directory level rules for directory src
@@ -95,7 +95,7 @@ src/CMakeFiles/GA.dir/all: src/cvplotlib/CMakeFiles/cvplotlib.dir/all
 src/CMakeFiles/GA.dir/all: src/GAlib/CMakeFiles/GAlib.dir/all
 	$(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/depend
 	$(MAKE) -f src/CMakeFiles/GA.dir/build.make src/CMakeFiles/GA.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=1,2,3 "Built target GA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles --progress-num=1,2,3 "Built target GA"
 .PHONY : src/CMakeFiles/GA.dir/all
 
 # Include target in all.
@@ -105,9 +105,9 @@ all: src/CMakeFiles/GA.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/GA.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/GA.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/GA.dir/rule
 
 # Convenience name for target.
@@ -150,7 +150,7 @@ src/cvplotlib/preinstall:
 src/cvplotlib/CMakeFiles/cvplotlib.dir/all:
 	$(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/depend
 	$(MAKE) -f src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make src/cvplotlib/CMakeFiles/cvplotlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=8,9,10,11,12 "Built target cvplotlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles --progress-num=9,10,11,12,13 "Built target cvplotlib"
 .PHONY : src/cvplotlib/CMakeFiles/cvplotlib.dir/all
 
 # Include target in all.
@@ -160,9 +160,9 @@ all: src/cvplotlib/CMakeFiles/cvplotlib.dir/all
 
 # Build rule for subdir invocation for target.
 src/cvplotlib/CMakeFiles/cvplotlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 src/cvplotlib/CMakeFiles/cvplotlib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles 0
 .PHONY : src/cvplotlib/CMakeFiles/cvplotlib.dir/rule
 
 # Convenience name for target.
@@ -205,7 +205,7 @@ src/GAlib/preinstall:
 src/GAlib/CMakeFiles/GAlib.dir/all:
 	$(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/depend
 	$(MAKE) -f src/GAlib/CMakeFiles/GAlib.dir/build.make src/GAlib/CMakeFiles/GAlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=4,5,6,7 "Built target GAlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles --progress-num=4,5,6,7,8 "Built target GAlib"
 .PHONY : src/GAlib/CMakeFiles/GAlib.dir/all
 
 # Include target in all.
@@ -215,9 +215,9 @@ all: src/GAlib/CMakeFiles/GAlib.dir/all
 
 # Build rule for subdir invocation for target.
 src/GAlib/CMakeFiles/GAlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 src/GAlib/CMakeFiles/GAlib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles 0
 .PHONY : src/GAlib/CMakeFiles/GAlib.dir/rule
 
 # Convenience name for target.

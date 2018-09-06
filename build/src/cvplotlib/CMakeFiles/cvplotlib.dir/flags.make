@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/shisanchuan/C++work/GeneticAlgorithm/includes -I/usr/include/opencv 
+CXX_INCLUDES = -I/home/shisanchuan/C++_work/GeneticAlgorithm/includes -I/usr/include/opencv 
 

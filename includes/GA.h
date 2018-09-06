@@ -68,5 +68,19 @@ public:
 	GA_TSP& mut(cv::Mat &Popula,float opt=0);
 	GA_TSP& select(cv::Mat &Popula,int _method=0){GA::select(Popula,_method);return *this;}
 };
-
+//QGA
+class QGA:public GA
+{
+public:
+	QGA(const int _chrom_num=80,const int _gene_num=20,
+		const float _p_recombin=0.3,const float _p_mut=0.2,
+		const float min=-pi,const float max=pi,const int _para_num=1):
+	GA(_chrom_num,_gene_num,_p_recombin,_p_mut,min,max,_para_num){}
+	~QGA(){}
+	cv::Mat crtbp(const int &Nind=0,const int &Lind=0);
+	void bs2rv(cv::Mat &Popula,float min=-pi,float max=pi);//修改编码方式
+	QGA& select(cv::Mat &Popula);
+	QGA& recombin(cv::Mat &Popula,const float &opt=0)=delete;
+	QGA& mut(cv::Mat &Popula,float opt=0)=delete;
+};
 

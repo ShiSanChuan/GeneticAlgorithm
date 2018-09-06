@@ -1,4 +1,5 @@
 #include "GA.h"
+
 GA::GA(const int _chrom_num,const int _gene_num,const float _p_recombin,
 	const float _p_mut,const float min,const float max,const int _para_num){
 	if(_chrom_num<=0||_gene_num<=0||
@@ -8,13 +9,13 @@ GA::GA(const int _chrom_num,const int _gene_num,const float _p_recombin,
 		std::cout<<"set GA parameter error,check it!\n";
 		exit(1);
 	}
-	chrom_num=_chrom_num;
-	gene_num=_gene_num;
-	p_recombin=_p_recombin;
-	p_mut=_p_mut;
-	search_min=min;
-	search_max=max;
-	para_num=_para_num;
+	chrom_num=_chrom_num;//种群个体数
+	gene_num=_gene_num;//基因数
+	p_recombin=_p_recombin;//交叉概率
+	p_mut=_p_mut;//变异概率
+	search_min=min;//区间下限
+	search_max=max;//区间上限
+	para_num=_para_num;//编码单元数
 }
 void GA::solve(float (*_fun)(std::vector<float> argv),const int &_para_num){
 	if(_para_num!=0)para_num=_para_num;
@@ -118,6 +119,7 @@ void GA::bs2rv(cv::Mat &Popula,float min,float max){
 	if(max==0)max=search_max;
 	unsigned long int part=Popula.cols/para_num;
 	unsigned long int Max=(unsigned long int)1<<part;Max--;
+	//尝试使用at<float>读取 char类型的矩阵？？？
 	for(int i=0;i<Popula.rows;i++){
 		unsigned long int *sum=new unsigned long int[para_num]();
 		for(long int j=0,m=1;j<para_num*part;j++){

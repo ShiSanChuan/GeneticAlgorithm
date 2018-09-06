@@ -8,6 +8,7 @@
 - 多元函数优化目标
 - 基于遗传算法的BP神经网络（施工中）
 - 基于遗传算法的TSP问题
+- 基于量子遗传算法 （施工中）
 
 ## How to use
 ```
@@ -88,6 +89,39 @@ GA_TSP ga(40,address.rows);
 ga.TSPsolve(address);
 ```
 <img src="demo_picture/demo4_1.png">
+
+### 基于量子遗传算法
+- 量子遗传算法（QGA）是一种概率型算法，抛弃普通遗传算法的基因交叉和变异操作，通过使用量子门旋转来调整基因，基本理解是每个基因代表一个角度值，角度值在-pi~pi之间变动，sin（）^2处理后，通过每次的概率来获得该基因是0还是1，然后通过调整角度值使得新的个体。（程序中没有按照书中所说的方法调整，因为在书中程序的matlab增加空间存储变量，在该程序中的基因对比时还是rand，所以不稳定）
+```
+ * select 通过量子门旋转更新群体 更新方法: P82
+ *x	best 	f(x)>f(best)	alpha	ab>0	ab<0	a=0	b=0
+ *0	0		false			0		0		0		0	0
+ *0	0		true			0		0		0		0	0
+ *0	1		false			0.01pi	1		-1		0	+-1
+ *0	1		true			0.01pi	-1		1		+-1	0
+ *1	0		false			0.01pi	-1		1		+-1	0
+ *1	0		true			0.01pi	1		-1		0	+-1
+ *1	1		false			0		0		0		0	0
+ *1	1		true			0		0		0		0	0
+```
+
+```cpp
+float fun2(std::vector<float> argv){
+	float x=argv[0];
+	float y=argv[1];
+	return (x*std::cos(2*pi*y)+y*std::sin(2*pi*x));
+}
+...
+QGA ga(80,80);
+ga.solve(fun2,2);
+Popula=ga.crtbp();
+...
+ga.bs2rv(Popula,-2,2);
+ga.ranking();
+ga.select(Popula);
+```
+
+<img src="demo_picture/demo5_1.png">
 
 ## some Problem
 - 在每次选择最优种群个体时，保护当前最优个体加上赌盘选择法可以加快迭代优化，并且增加稳定。

@@ -4,9 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA.cpp" "/home/shisanchuan/C++work/GeneticAlgorithm/build/src/GAlib/CMakeFiles/GAlib.dir/GA.cpp.o"
-  "/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA_BP.cpp" "/home/shisanchuan/C++work/GeneticAlgorithm/build/src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.o"
-  "/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA_TSP.cpp" "/home/shisanchuan/C++work/GeneticAlgorithm/build/src/GAlib/CMakeFiles/GAlib.dir/GA_TSP.cpp.o"
+  "/home/shisanchuan/C++_work/GeneticAlgorithm/src/GAlib/GA.cpp" "/home/shisanchuan/C++_work/GeneticAlgorithm/build/src/GAlib/CMakeFiles/GAlib.dir/GA.cpp.o"
+  "/home/shisanchuan/C++_work/GeneticAlgorithm/src/GAlib/GA_BP.cpp" "/home/shisanchuan/C++_work/GeneticAlgorithm/build/src/GAlib/CMakeFiles/GAlib.dir/GA_BP.cpp.o"
+  "/home/shisanchuan/C++_work/GeneticAlgorithm/src/GAlib/GA_TSP.cpp" "/home/shisanchuan/C++_work/GeneticAlgorithm/build/src/GAlib/CMakeFiles/GAlib.dir/GA_TSP.cpp.o"
+  "/home/shisanchuan/C++_work/GeneticAlgorithm/src/GAlib/QGA.cpp" "/home/shisanchuan/C++_work/GeneticAlgorithm/build/src/GAlib/CMakeFiles/GAlib.dir/QGA.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -4,29 +4,29 @@
 		{
 			"file_regex": "(.+[^:]):(\\d+):(\\d+): (?:fatal )?((?:error|warning): .+)$",
 			"name": "GeneticAlgorithmByC++ (Linux)",
-			"shell_cmd": "make -j4",
+			"shell_cmd": "make -j8",
 			"syntax": "Packages/CMakeBuilder/Syntax/Make.sublime-syntax",
 			"variants":
 			[
 				{
 					"name": "clean",
-					"shell_cmd": "make -j4 clean"
+					"shell_cmd": "make -j8 clean"
 				},
 				{
 					"name": "rebuild_cache",
-					"shell_cmd": "make -j4 rebuild_cache"
+					"shell_cmd": "make -j8 rebuild_cache"
 				},
 				{
 					"name": "GA",
-					"shell_cmd": "make -j4 GA"
+					"shell_cmd": "make -j8 GA"
 				},
 				{
 					"name": "cvplotlib",
-					"shell_cmd": "make -j4 cvplotlib"
+					"shell_cmd": "make -j8 cvplotlib"
 				},
 				{
 					"name": "GAlib",
-					"shell_cmd": "make -j4 GAlib"
+					"shell_cmd": "make -j8 GAlib"
 				}
 			],
 			"working_dir": "${project_path}/build"
