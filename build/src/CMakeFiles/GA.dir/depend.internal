@@ -9,7 +9,7 @@ src/CMakeFiles/GA.dir/demo.cpp.o
  ../includes/figure.h
  ../includes/highgui.h
  ../includes/window.h
- /home/shisanchuan/C++_work/GeneticAlgorithm/src/demo.cpp
+ /home/shisanchuan/C++work/GeneticAlgorithm/src/demo.cpp
 src/CMakeFiles/GA.dir/main.cpp.o
  ../includes/GA.h
  ../includes/color.h
@@ -18,4 +18,4 @@ src/CMakeFiles/GA.dir/main.cpp.o
  ../includes/figure.h
  ../includes/highgui.h
  ../includes/window.h
- /home/shisanchuan/C++_work/GeneticAlgorithm/src/main.cpp
+ /home/shisanchuan/C++work/GeneticAlgorithm/src/main.cpp

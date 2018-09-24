@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/cmake-3.12.0/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /opt/cmake-3.12.0/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shisanchuan/C++_work/GeneticAlgorithm
+CMAKE_SOURCE_DIR = /home/shisanchuan/C++work/GeneticAlgorithm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shisanchuan/C++_work/GeneticAlgorithm/build
+CMAKE_BINARY_DIR = /home/shisanchuan/C++work/GeneticAlgorithm/build
 
 # Include any dependencies generated for this target.
 include src/cvplotlib/CMakeFiles/cvplotlib.dir/depend.make
@@ -59,55 +59,55 @@ include src/cvplotlib/CMakeFiles/cvplotlib.dir/flags.make
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/color.cc.o: src/cvplotlib/CMakeFiles/cvplotlib.dir/flags.make
 src/cvplotlib/CMakeFiles/cvplotlib.dir/color.cc.o: ../src/cvplotlib/color.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/cvplotlib/CMakeFiles/cvplotlib.dir/color.cc.o"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cvplotlib.dir/color.cc.o -c /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/color.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/cvplotlib/CMakeFiles/cvplotlib.dir/color.cc.o"
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cvplotlib.dir/color.cc.o -c /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/color.cc
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/color.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cvplotlib.dir/color.cc.i"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/color.cc > CMakeFiles/cvplotlib.dir/color.cc.i
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/color.cc > CMakeFiles/cvplotlib.dir/color.cc.i
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/color.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cvplotlib.dir/color.cc.s"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/color.cc -o CMakeFiles/cvplotlib.dir/color.cc.s
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/color.cc -o CMakeFiles/cvplotlib.dir/color.cc.s
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/figure.cc.o: src/cvplotlib/CMakeFiles/cvplotlib.dir/flags.make
 src/cvplotlib/CMakeFiles/cvplotlib.dir/figure.cc.o: ../src/cvplotlib/figure.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/cvplotlib/CMakeFiles/cvplotlib.dir/figure.cc.o"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cvplotlib.dir/figure.cc.o -c /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/figure.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/cvplotlib/CMakeFiles/cvplotlib.dir/figure.cc.o"
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cvplotlib.dir/figure.cc.o -c /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/figure.cc
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/figure.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cvplotlib.dir/figure.cc.i"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/figure.cc > CMakeFiles/cvplotlib.dir/figure.cc.i
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/figure.cc > CMakeFiles/cvplotlib.dir/figure.cc.i
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/figure.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cvplotlib.dir/figure.cc.s"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/figure.cc -o CMakeFiles/cvplotlib.dir/figure.cc.s
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/figure.cc -o CMakeFiles/cvplotlib.dir/figure.cc.s
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.o: src/cvplotlib/CMakeFiles/cvplotlib.dir/flags.make
 src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.o: ../src/cvplotlib/highgui.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.o"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cvplotlib.dir/highgui.cc.o -c /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/highgui.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.o"
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cvplotlib.dir/highgui.cc.o -c /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/highgui.cc
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cvplotlib.dir/highgui.cc.i"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/highgui.cc > CMakeFiles/cvplotlib.dir/highgui.cc.i
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/highgui.cc > CMakeFiles/cvplotlib.dir/highgui.cc.i
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cvplotlib.dir/highgui.cc.s"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/highgui.cc -o CMakeFiles/cvplotlib.dir/highgui.cc.s
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/highgui.cc -o CMakeFiles/cvplotlib.dir/highgui.cc.s
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.o: src/cvplotlib/CMakeFiles/cvplotlib.dir/flags.make
 src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.o: ../src/cvplotlib/window.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.o"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cvplotlib.dir/window.cc.o -c /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/window.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.o"
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cvplotlib.dir/window.cc.o -c /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/window.cc
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cvplotlib.dir/window.cc.i"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/window.cc > CMakeFiles/cvplotlib.dir/window.cc.i
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/window.cc > CMakeFiles/cvplotlib.dir/window.cc.i
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cvplotlib.dir/window.cc.s"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib/window.cc -o CMakeFiles/cvplotlib.dir/window.cc.s
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/window.cc -o CMakeFiles/cvplotlib.dir/window.cc.s
 
 # Object files for target cvplotlib
 cvplotlib_OBJECTS = \
@@ -125,9 +125,9 @@ src/cvplotlib/libcvplotlib.a: src/cvplotlib/CMakeFiles/cvplotlib.dir/highgui.cc.
 src/cvplotlib/libcvplotlib.a: src/cvplotlib/CMakeFiles/cvplotlib.dir/window.cc.o
 src/cvplotlib/libcvplotlib.a: src/cvplotlib/CMakeFiles/cvplotlib.dir/build.make
 src/cvplotlib/libcvplotlib.a: src/cvplotlib/CMakeFiles/cvplotlib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libcvplotlib.a"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && $(CMAKE_COMMAND) -P CMakeFiles/cvplotlib.dir/cmake_clean_target.cmake
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cvplotlib.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libcvplotlib.a"
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && $(CMAKE_COMMAND) -P CMakeFiles/cvplotlib.dir/cmake_clean_target.cmake
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cvplotlib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/cvplotlib/CMakeFiles/cvplotlib.dir/build: src/cvplotlib/libcvplotlib.a
@@ -135,10 +135,10 @@ src/cvplotlib/CMakeFiles/cvplotlib.dir/build: src/cvplotlib/libcvplotlib.a
 .PHONY : src/cvplotlib/CMakeFiles/cvplotlib.dir/build
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/clean:
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib && $(CMAKE_COMMAND) -P CMakeFiles/cvplotlib.dir/cmake_clean.cmake
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib && $(CMAKE_COMMAND) -P CMakeFiles/cvplotlib.dir/cmake_clean.cmake
 .PHONY : src/cvplotlib/CMakeFiles/cvplotlib.dir/clean
 
 src/cvplotlib/CMakeFiles/cvplotlib.dir/depend:
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shisanchuan/C++_work/GeneticAlgorithm /home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplotlib /home/shisanchuan/C++_work/GeneticAlgorithm/build /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/cvplotlib/CMakeFiles/cvplotlib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shisanchuan/C++work/GeneticAlgorithm /home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib /home/shisanchuan/C++work/GeneticAlgorithm/build /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib /home/shisanchuan/C++work/GeneticAlgorithm/build/src/cvplotlib/CMakeFiles/cvplotlib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/cvplotlib/CMakeFiles/cvplotlib.dir/depend
 

@@ -83,4 +83,33 @@ public:
 	QGA& recombin(cv::Mat &Popula,const float &opt=0)=delete;
 	QGA& mut(cv::Mat &Popula,float opt=0)=delete;
 };
-
+//PSO
+class PSO
+{
+private:
+	int chrom_num;//不需要 基因 离子群都为浮点数
+	int para_num;
+	float c1;
+	float c2;
+	float wmax;
+	float wmin;
+	float bmin;
+	float bmax;
+	cv::Mat Population;
+	cv::Mat v;//speed 速度
+	cv::Mat Pbest;//popula history best 个体历史最有
+	std::vector<float> Gbest;//globel best 全局最优
+	std::vector<float> post;
+	std::vector<float> ost;
+	float (*fun)(std::vector<float> argv);
+public:
+	PSO(const int _chrom_num=50,const int _para_num=1,
+		const float min=0,const float max=1,
+		const float c1=0.8,const float c2=0.8,const float wmax=1.2,
+		const float wmin=0.1);
+	~PSO(){}
+	void crtbp(const int &_chrom_num=0,const int &_para_num=0);
+	void solve(float(*_fun)(std::vector<float> argv));
+	std::pair<std::vector<float>, float>  ranking();
+	void update(bool para=0);
+};

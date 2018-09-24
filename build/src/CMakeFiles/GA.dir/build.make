@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/cmake-3.12.0/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /opt/cmake-3.12.0/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shisanchuan/C++_work/GeneticAlgorithm
+CMAKE_SOURCE_DIR = /home/shisanchuan/C++work/GeneticAlgorithm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shisanchuan/C++_work/GeneticAlgorithm/build
+CMAKE_BINARY_DIR = /home/shisanchuan/C++work/GeneticAlgorithm/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/GA.dir/depend.make
@@ -59,29 +59,29 @@ include src/CMakeFiles/GA.dir/flags.make
 
 src/CMakeFiles/GA.dir/demo.cpp.o: src/CMakeFiles/GA.dir/flags.make
 src/CMakeFiles/GA.dir/demo.cpp.o: ../src/demo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/GA.dir/demo.cpp.o"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GA.dir/demo.cpp.o -c /home/shisanchuan/C++_work/GeneticAlgorithm/src/demo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/GA.dir/demo.cpp.o"
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GA.dir/demo.cpp.o -c /home/shisanchuan/C++work/GeneticAlgorithm/src/demo.cpp
 
 src/CMakeFiles/GA.dir/demo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GA.dir/demo.cpp.i"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++_work/GeneticAlgorithm/src/demo.cpp > CMakeFiles/GA.dir/demo.cpp.i
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/GeneticAlgorithm/src/demo.cpp > CMakeFiles/GA.dir/demo.cpp.i
 
 src/CMakeFiles/GA.dir/demo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GA.dir/demo.cpp.s"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++_work/GeneticAlgorithm/src/demo.cpp -o CMakeFiles/GA.dir/demo.cpp.s
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/GeneticAlgorithm/src/demo.cpp -o CMakeFiles/GA.dir/demo.cpp.s
 
 src/CMakeFiles/GA.dir/main.cpp.o: src/CMakeFiles/GA.dir/flags.make
 src/CMakeFiles/GA.dir/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/GA.dir/main.cpp.o"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GA.dir/main.cpp.o -c /home/shisanchuan/C++_work/GeneticAlgorithm/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/GA.dir/main.cpp.o"
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GA.dir/main.cpp.o -c /home/shisanchuan/C++work/GeneticAlgorithm/src/main.cpp
 
 src/CMakeFiles/GA.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GA.dir/main.cpp.i"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++_work/GeneticAlgorithm/src/main.cpp > CMakeFiles/GA.dir/main.cpp.i
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/GeneticAlgorithm/src/main.cpp > CMakeFiles/GA.dir/main.cpp.i
 
 src/CMakeFiles/GA.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GA.dir/main.cpp.s"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++_work/GeneticAlgorithm/src/main.cpp -o CMakeFiles/GA.dir/main.cpp.s
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/GeneticAlgorithm/src/main.cpp -o CMakeFiles/GA.dir/main.cpp.s
 
 # Object files for target GA
 GA_OBJECTS = \
@@ -94,29 +94,28 @@ GA_EXTERNAL_OBJECTS =
 src/GA: src/CMakeFiles/GA.dir/demo.cpp.o
 src/GA: src/CMakeFiles/GA.dir/main.cpp.o
 src/GA: src/CMakeFiles/GA.dir/build.make
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_ts.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.9
+src/GA: /usr/lib/libopencv_dnn.so.3.3.1
+src/GA: /usr/lib/libopencv_ml.so.3.3.1
+src/GA: /usr/lib/libopencv_objdetect.so.3.3.1
+src/GA: /usr/lib/libopencv_shape.so.3.3.1
+src/GA: /usr/lib/libopencv_stitching.so.3.3.1
+src/GA: /usr/lib/libopencv_superres.so.3.3.1
+src/GA: /usr/lib/libopencv_videostab.so.3.3.1
 src/GA: src/cvplotlib/libcvplotlib.a
 src/GA: src/GAlib/libGAlib.a
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.9
-src/GA: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9
+src/GA: /usr/lib/libopencv_calib3d.so.3.3.1
+src/GA: /usr/lib/libopencv_features2d.so.3.3.1
+src/GA: /usr/lib/libopencv_flann.so.3.3.1
+src/GA: /usr/lib/libopencv_highgui.so.3.3.1
+src/GA: /usr/lib/libopencv_photo.so.3.3.1
+src/GA: /usr/lib/libopencv_video.so.3.3.1
+src/GA: /usr/lib/libopencv_videoio.so.3.3.1
+src/GA: /usr/lib/libopencv_imgcodecs.so.3.3.1
+src/GA: /usr/lib/libopencv_imgproc.so.3.3.1
+src/GA: /usr/lib/libopencv_core.so.3.3.1
 src/GA: src/CMakeFiles/GA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shisanchuan/C++_work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable GA"
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GA.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shisanchuan/C++work/GeneticAlgorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable GA"
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/GA.dir/build: src/GA
@@ -124,10 +123,10 @@ src/CMakeFiles/GA.dir/build: src/GA
 .PHONY : src/CMakeFiles/GA.dir/build
 
 src/CMakeFiles/GA.dir/clean:
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build/src && $(CMAKE_COMMAND) -P CMakeFiles/GA.dir/cmake_clean.cmake
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build/src && $(CMAKE_COMMAND) -P CMakeFiles/GA.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/GA.dir/clean
 
 src/CMakeFiles/GA.dir/depend:
-	cd /home/shisanchuan/C++_work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shisanchuan/C++_work/GeneticAlgorithm /home/shisanchuan/C++_work/GeneticAlgorithm/src /home/shisanchuan/C++_work/GeneticAlgorithm/build /home/shisanchuan/C++_work/GeneticAlgorithm/build/src /home/shisanchuan/C++_work/GeneticAlgorithm/build/src/CMakeFiles/GA.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shisanchuan/C++work/GeneticAlgorithm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shisanchuan/C++work/GeneticAlgorithm /home/shisanchuan/C++work/GeneticAlgorithm/src /home/shisanchuan/C++work/GeneticAlgorithm/build /home/shisanchuan/C++work/GeneticAlgorithm/build/src /home/shisanchuan/C++work/GeneticAlgorithm/build/src/CMakeFiles/GA.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/GA.dir/depend
 

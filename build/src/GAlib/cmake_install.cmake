@@ -1,4 +1,4 @@
-# Install script for directory: /home/shisanchuan/C++_work/GeneticAlgorithm/src/GAlib
+# Install script for directory: /home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

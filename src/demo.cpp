@@ -223,3 +223,49 @@ void demo5(void){
 	}
 	cv::waitKey(0);
 }
+/**
+ * 粒子群算法求解
+ */
+float fun3(std::vector<float> argv){
+	float x=argv[0];
+	float y=argv[1];
+	return (x*std::cos(2*pi*y)+y*std::sin(2*pi*x));
+}
+void demo6(){
+	cv::Mat Popula;
+	std::vector<float> data;
+	std::vector<std::pair<float, float> > recodex,recodey;
+	PSO pso(50,2,-2,2);
+	pso.solve(fun3);
+	//种群越大，越稳定，基因编码越多迭代越稳定
+	pso.crtbp();
+	for(int i=0;i<80;i++){
+		std::pair<std::vector<float>, float> best=pso.ranking();
+		recodex.push_back(std::pair<float,float>((best.first[0]),best.second));
+		recodey.push_back(std::pair<float,float>((best.first[1]),best.second));
+		data.push_back(recodex[recodex.size()-1].second);
+		pso.update(1);
+	}
+	//绘图
+	{
+		auto name="math";
+		cvplot::setWindowTitle(name,"origin curve");
+		cvplot::moveWindow(name, 0, 0);
+		cvplot::resizeWindow(name, 400, 400);
+		auto &figure=cvplot::figure(name);
+		figure.series("x-z").set(recodex).type(cvplot::Dots).color(cvplot::Green);
+		figure.series("y-z").set(recodey).type(cvplot::Dots).color(cvplot::Red);
+		figure.border(30).show(false);
+	}
+	{
+		auto name="PSO";
+		cvplot::setWindowTitle(name,"PSOq");
+		cvplot::moveWindow(name, 400, 0);
+		cvplot::resizeWindow(name, 400, 400);
+		auto &figure=cvplot::figure(name);
+		// std::sort(data.begin(), data.end(), [](float &a,float &b){if(a<b)return true;else return false;});
+		figure.series("count").setValue(data).color(cvplot::Orange);
+		figure.border(30).show();
+	}
+	cv::waitKey(0);
+}

@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/GAlib.dir/GA.cpp.o"
   "CMakeFiles/GAlib.dir/GA_BP.cpp.o"
   "CMakeFiles/GAlib.dir/GA_TSP.cpp.o"
+  "CMakeFiles/GAlib.dir/PSO.cpp.o"
   "CMakeFiles/GAlib.dir/QGA.cpp.o"
   "libGAlib.pdb"
   "libGAlib.a"

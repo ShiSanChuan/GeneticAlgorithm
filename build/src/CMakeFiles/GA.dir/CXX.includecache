@@ -62,7 +62,7 @@ map
 string
 -
 
-/home/shisanchuan/C++_work/GeneticAlgorithm/src/demo.cpp
+/home/shisanchuan/C++work/GeneticAlgorithm/src/demo.cpp
 iostream
 -
 algorithm
@@ -72,11 +72,11 @@ vector
 cstdarg
 -
 cvplot.h
-/home/shisanchuan/C++_work/GeneticAlgorithm/src/cvplot.h
+/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplot.h
 opencv2/opencv.hpp
-/home/shisanchuan/C++_work/GeneticAlgorithm/src/opencv2/opencv.hpp
+/home/shisanchuan/C++work/GeneticAlgorithm/src/opencv2/opencv.hpp
 GA.h
-/home/shisanchuan/C++_work/GeneticAlgorithm/src/GA.h
+/home/shisanchuan/C++work/GeneticAlgorithm/src/GA.h
 demo.h
-/home/shisanchuan/C++_work/GeneticAlgorithm/src/demo.h
+/home/shisanchuan/C++work/GeneticAlgorithm/src/demo.h
 

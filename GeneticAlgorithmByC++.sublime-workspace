@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"result"
+			],
+			[
+				"_",
+				"_chrom_num"
+			],
+			[
+				"row",
+				"row\tcv::Mat row(int y) const"
+			],
+			[
+				"da",
+				"dataPoint"
+			],
+			[
+				"data",
+				"dataPoint\tstd::vector<std::pair<float, float> > dataPoint"
+			],
+			[
+				"Gr",
+				"Green\tconst cvplot::Color Green"
+			],
+			[
+				"add",
+				"addValue\tcvplot::Series & addValue(const std::vector<float> &values)"
+			],
+			[
+				"dis",
+				"dist"
+			],
+			[
 				"gen",
 				"gene1"
 			],
@@ -28,20 +60,12 @@
 				"transpose\tvoid transpose(InputArray src, OutputArray dst)"
 			],
 			[
-				"dis",
-				"distance"
-			],
-			[
 				"be",
 				"best"
 			],
 			[
 				"inde",
 				"indexi\tint indexi"
-			],
-			[
-				"row",
-				"rowRange\tcv::Mat rowRange(int startrow, int endrow) const"
 			],
 			[
 				"Poi",
@@ -252,10 +276,6 @@
 				"main\tmain()"
 			],
 			[
-				"da",
-				"data_decode"
-			],
-			[
 				"com",
 				"command_buffer\tuchar * command_buffer"
 			],
@@ -271,16 +291,34 @@
 			"file": "src/main.cpp",
 			"settings":
 			{
-				"buffer_size": 321,
+				"buffer_size": 403,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "includes/demo.h",
+			"file": "src/demo.cpp",
 			"settings":
 			{
-				"buffer_size": 130,
+				"buffer_size": 7053,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/GAlib/PSO.cpp",
+			"settings":
+			{
+				"buffer_size": 2274,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/shisanchuan/C++work/mlpacktest.cpp",
+			"settings":
+			{
+				"buffer_size": 970,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -289,16 +327,7 @@
 			"file": "includes/GA.h",
 			"settings":
 			{
-				"buffer_size": 2108,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/GAlib/GA_BP.cpp",
-			"settings":
-			{
-				"buffer_size": 1517,
+				"buffer_size": 2648,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -307,22 +336,13 @@
 			"file": "src/GAlib/GA.cpp",
 			"settings":
 			{
-				"buffer_size": 4447,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/GAlib/GA_TSP.cpp",
-			"settings":
-			{
-				"buffer_size": 2596,
+				"buffer_size": 4523,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "GeneticAlgorithmByC++ (Linux)",
+	"build_system": "Packages/User/C++.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -384,22 +404,66 @@
 				"GeneticAlgorithmByC++ (Linux)",
 				""
 			]
+		],
+		[
+			[
+				[
+					"Packages/User/C++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/C++.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run-opencv"
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run-armadillo"
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run-mlpack"
+				]
+			],
+			[
+				"Packages/User/C++.sublime-build",
+				"Run"
+			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Run",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "Package Control: ",
+		"height": 388.0,
+		"last_filter": "ter",
 		"selected_items":
 		[
 			[
-				"Package Control: ",
-				"Package Control: Upgrade Package"
-			],
-			[
 				"ter",
 				"Terminal View: Open Bash Terminal"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade Package"
 			],
 			[
 				"git push",
@@ -458,7 +522,7 @@
 				"EasyClangComplete: Settings"
 			]
 		],
-		"width": 529.0
+		"width": 386.0
 	},
 	"console":
 	{
@@ -478,26 +542,44 @@
 	},
 	"expanded_folders":
 	[
-		"/home/shisanchuan/C++_work/GeneticAlgorithm"
+		"/home/shisanchuan/C++work/GeneticAlgorithm",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src"
 	],
 	"file_history":
 	[
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA_TSP.cpp",
+		"/home/shisanchuan/C++work/bulid_tree.cpp",
+		"/home/shisanchuan/C++work/mlpacktest.cpp",
+		"/media/shisanchuan/C2B31627EFFD64AE/2018/mark.py",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/QGA.cpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/figure.h",
+		"/home/shisanchuan/.cache/.fr-1M0XA9/chapter10/main.m",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/CMakeLists.txt",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/demo.h",
 		"/home/shisanchuan/.config/sublime-text-3/Packages/User/C++.sublime-build",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/E_GA.cpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/build/src/point.txt",
+		"/home/shisanchuan/C++work/darknet/python/darknet.py",
+		"/media/shisanchuan/Ubuntu 16.0/predata.m",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/build/src/adjust_data.txt",
+		"/home/shisanchuan/matlab_work/2017E/predata.m",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/figure.cc",
+		"/home/shisanchuan/GeneticAlgorithm/build/src/adjust_data.txt",
+		"/usr/include/opencv2/core/mat.hpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA.cpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA_BP.cpp",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/GA.h",
+		"/home/shisanchuan/C++work/GeneticAlgorithm/CMakeLists.txt",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/src/demo.cpp",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/README.md",
 		"/home/shisanchuan/.config/sublime-text-3/Packages/User/SublimeGDB.sublime-settings",
 		"/home/shisanchuan/.config/sublime-text-3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
-		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA.cpp",
 		"/usr/include/c++/5/bits/stl_algo.h",
-		"/home/shisanchuan/C++work/GeneticAlgorithm/src/cvplotlib/figure.cc",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/internal.h",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/GA.h",
-		"/home/shisanchuan/C++work/GeneticAlgorithm/src/CMakeLists.txt",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/src/GAlib/CMakeLists.txt",
-		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/figure.h",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/includes/window.h",
 		"/home/shisanchuan/C++work/GeneticAlgorithm/GeneticAlgorithmByC++.sublime-project",
-		"/home/shisanchuan/C++work/GeneticAlgorithm/CMakeLists.txt",
 		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/src/cvplotlib/figure.cc",
 		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/includes/figure.h",
 		"/home/shisanchuan/C++work/GeneticAlgorithmByC++/includes/window.h",
@@ -520,7 +602,7 @@
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 52.0
 	},
 	"find_in_files":
 	{
@@ -534,6 +616,24 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"MPSO",
+			"=",
+			"Population",
+			"std::vector<int> ",
+			"=djistra(data",
+			"tem",
+			"i",
+			"uint",
+			"string",
+			"d",
+			"D",
+			"data",
+			"uchar",
+			"d",
+			"D",
+			"Population",
+			"uint",
+			"fun",
 			"float",
 			"rowRange",
 			"opt",
@@ -573,7 +673,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -582,19 +682,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 321,
+						"buffer_size": 403,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								258,
-								258
+								271,
+								271
 							]
 						],
 						"settings":
 						{
+							"SL.16.region_keys":
+							[
+							],
 							"is_init_dirty_state": false,
 							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C++.sublime-syntax",
@@ -602,162 +705,178 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "includes/demo.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 130,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								98,
-								98
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "includes/GA.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2108,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1816,
-								1816
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 660.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/GAlib/GA_BP.cpp",
-					"semi_transient": false,
+					"buffer": 1,
+					"file": "src/demo.cpp",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1517,
+						"buffer_size": 7053,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15,
-								15
+								3272,
+								3272
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": false,
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 4.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/GAlib/GA.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4447,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2116,
-								2116
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C++.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 900.0,
+						"translation.y": 1701.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/GAlib/GA_TSP.cpp",
+					"buffer": 2,
+					"file": "src/GAlib/PSO.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2596,
+						"buffer_size": 2274,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1774,
-								1774
+								2269,
+								2269
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
+							"SL.17.region_keys":
+							[
+							],
+							"SL.19.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1071.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/shisanchuan/C++work/mlpacktest.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 970,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								638,
+								638
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "includes/GA.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								184,
+								184
+							]
+						],
+						"settings":
+						{
+							"SL.20.region_keys":
+							[
+							],
+							"SL.22.region_keys":
+							[
+							],
+							"SL.82.region_keys":
+							[
+							],
 							"syntax": "Packages/C++/C++.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 900.0,
+						"translation.y": 504.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/GAlib/GA.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1230,
+								1230
+							]
+						],
+						"settings":
+						{
+							"SL.26.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1701.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -765,7 +884,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -780,11 +899,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.686724565757,
 			1.0
 		],
 		"rows":
@@ -794,9 +920,17 @@
 		]
 	},
 	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
 	"output.exec":
 	{
-		"height": 148.0
+		"height": 164.0
+	},
+	"output.files_to_be_deleted":
+	{
+		"height": 134.0
 	},
 	"output.find_results":
 	{
@@ -810,11 +944,11 @@
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "GeneticAlgorithmByC++ (Linux)",
+	"pinned_build_system": "Packages/User/C++.sublime-build",
 	"project": "GeneticAlgorithmByC++.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 56.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -852,7 +986,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 219.0,
+	"side_bar_width": 248.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
