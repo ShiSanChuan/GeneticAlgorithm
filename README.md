@@ -8,7 +8,8 @@
 - 多元函数优化目标
 - 基于遗传算法的BP神经网络（施工中）
 - 基于遗传算法的TSP问题
-- 基于量子遗传算法 （施工中）
+- 基于量子遗传算法 
+- 粒子群算法
 
 ## How to use
 ```
@@ -122,6 +123,26 @@ ga.select(Popula);
 ```
 
 <img src="demo_picture/demo5_1.png">
+
+### 粒子群算法
+- 粒子群算法是一种群体搜索算法，每个粒子代表一个解，同时对应一个适应度，粒子向着全局和自身最优的地方前进，前进的速度由该粒子与当前最佳与历史最佳的粒子相对位置决定，因此能在可解空间中快速搜索。
+```cpp
+float fun3(std::vector<float> argv){
+	float x=argv[0];
+	float y=argv[1];
+	return (x*std::cos(2*pi*y)+y*std::sin(2*pi*x));
+}
+...
+PSO pso(50,2,-2,2);
+pso.solve(fun3);
+pso.crtbp();
+...
+pso.ranking();
+pso.update(1);
+```
+
+<img src="demo_picture/demo6_1.png">
+
 
 ## some Problem
 - 在每次选择最优种群个体时，保护当前最优个体加上赌盘选择法可以加快迭代优化，并且增加稳定。
